@@ -64,6 +64,35 @@
   }
 }
 
+// for the styling of the Recent posts thumbnails
+.thumbnail-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+
+.thumbnail-container img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;  
+  object-position: center;
+}
+
+.thumbnail-container img{
+  transition: 300ms ease-in-out;
+}
+
+.thumbnail-container:hover img{
+  transform: scale(1.1);
+}
+
+  .technology-stack {
+    max-width: 200px;
+    height: auto;
+  }
+
 /* remove border*/
 .page__content {
   .archive__item-title {
