@@ -105,6 +105,12 @@
   margin-top: 0;
   font-size: $type-size-6;
 
+  // want to limit the lines but fail
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
   & + p {
     text-indent: 0;
   }
@@ -119,9 +125,15 @@
   border-radius: $border-radius;
   overflow: hidden;
 
-  img {
-    width: 100%;
+  img{
+    width: 99%; 
+    object-fit: cover;
+    object-position: center;
   }
+}
+
+.archive__item-teaser img:hover{
+  transform: scale(1.1);
 }
 
 .archive__item-caption {
@@ -133,7 +145,7 @@
   color: #fff;
   font-family: $caption-font-family;
   font-size: $type-size-8;
-  background: #000;
+  background: rgb(0, 0, 0);
   text-align: right;
   z-index: 5;
   opacity: 0.5;
