@@ -1,5 +1,6 @@
 <div class="page__footer-follow">
   <ul>
+    <li><strong>Visitors: <span id="visits">0</span></strong></li>
     <script >
       const countEl = document.getElementById('visits');
       updateVisitCount();
@@ -11,7 +12,6 @@
 	        })
       }
     </script>
-    <li><strong>Visitors: <span id="visits">0</span></strong></li>
   </ul>
   <ul class="social-icons">
     {% if site.data.ui-text[site.locale].follow_label %}
