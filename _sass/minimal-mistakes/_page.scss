@@ -426,9 +426,9 @@ body {
    ========================================================================== */
 
 div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
-  height: 100%;
-  background-color:#eeeeee!important;
+  background-color:#eeeeee;
   border-radius: $border-radius;
+  display: flex;
 }
 
 .page__comments {
@@ -444,7 +444,7 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
   margin-bottom: 10px;
   padding-top: 2rem;
   font-size: $type-size-6;
-  border-top: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
   text-transform: uppercase;
 }
 
@@ -489,7 +489,7 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
 .comment__avatar {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: $border-radius;
 
   @include breakpoint($large) {
     width: 80px;
@@ -534,7 +534,7 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
   float: left;
   margin-top: 2em;
   padding-top: 1em;
-  border-top: 1px solid $border-color;
+  // border-top: 1px solid $border-color;
 
   @include breakpoint($large) {
     float: right;
