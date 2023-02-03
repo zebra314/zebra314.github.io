@@ -15,7 +15,7 @@ This webite is built to record my daily life and put some shitposts.Please feel 
     <ul>
       <li>
         <div class="timeline-content">
-          <h3 class="date">2003, july</h3>
+          <h3 class="date">July, 2003</h3>
           <h1>Begining</h1>
           <p>Born in Vancouver, Canada and moved back to Taiwan soon.</p>
         </div>
@@ -53,6 +53,14 @@ This webite is built to record my daily life and put some shitposts.Please feel 
           <h3 class="date">October, 2022</h3>
           <h1>Taiwan TDK Robocon</h1>
           <p>Build a robot to join this compotition with Itron members.I mainly responsible for the part of upper_control programmming.</p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-content">
+          <h3 class="date">January, 2023</h3>
+          <h1>Build up this website</h1>
+          <p> 
+          </p>
         </div>
       </li>
     </ul>
