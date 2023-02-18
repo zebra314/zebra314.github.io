@@ -10,6 +10,8 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "Chatter"
+    url: /chatter/
   - title: "Photo"
     url: /photo/
   - title: "About"
