@@ -703,20 +703,21 @@ html {
 }
 
 // 3D
+@media only screen and (min-width: 768px) {
 #threejs-container {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-  // min-height: 100vh;
+
   width: 100%;
-  // display: block;
-  // align-items: center;
-  // justify-content: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
   padding: 100px 0;
-  position: left;
   background-color: $background-color;
   overflow: hidden;
   clip: rect(50%, 50%, auto, auto); 
   border-radius: 20px;
+}
 }
