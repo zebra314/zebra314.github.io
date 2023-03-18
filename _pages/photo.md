@@ -1,6 +1,20 @@
 ---
 permalink: /photo/
 ---
+  <style>
+  body {
+    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg.jpeg');
+    /* Full height */
+    height: 50%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+  </style>
 ![i](/assets/image/photo_page/1.JPG)  
   
 ![i](/assets/image/photo_page/2.jpg)  
