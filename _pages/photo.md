@@ -38,7 +38,12 @@ permalink: /photo/
 
 ![i](/assets/image/photo_page/4.jpg)  
 
-![i](/assets/image/photo_page/5.jpg)  
+![i](/assets/image/photo_page/5.jpg) 
+
+<audio controls>
+  <source src="/assets/mp3/diane.mp3" type="audio/mpeg">
+  你的瀏覽器不支援 audio tag！
+</audio>
 
 ![i](/assets/image/photo_page/6.jpg)  
 
@@ -49,5 +54,10 @@ permalink: /photo/
 ![i](/assets/image/photo_page/9.jpg)   
 
 ![i](/assets/image/photo_page/10.jpg)   
+
+<audio controls>
+  <source src="/assets/mp3/marryme.mp3" type="audio/mpeg">
+  你的瀏覽器不支援 audio tag！
+</audio>
 
 ![i](/assets/image/photo_page/11.JPG)   
