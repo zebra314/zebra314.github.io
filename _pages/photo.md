@@ -15,6 +15,21 @@ permalink: /photo/
     
   }
   </style>
+
+  <!-- <audio controls autoplay >
+    <source src="../assets/mp3/howtobeaboy.mp3" type="audio/mpeg"/>
+  </audio>   -->
+
+<!-- <audio
+  controls
+  src="/assets/mp3/howtobeaboy.mp3">
+</audio> -->
+
+<audio controls>
+  <source src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
+  你的瀏覽器不支援 audio tag！
+</audio>
+
 ![i](/assets/image/photo_page/1.JPG)  
   
 ![i](/assets/image/photo_page/2.jpg)  
