@@ -8,25 +8,39 @@ permalink: /photo/
     height: 50%;
 
     /* Center and scale the image nicely */
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
     background-attachment: fixed;
+    background-size:100% 100vh;
     
   }
   </style>
+<script>
+// 获取音频元素
+var song1 = document.getElementById("song1");
+var song2 = document.getElementById("song2");
+var song3 = document.getElementById("song3");
 
-  <!-- <audio controls autoplay >
-    <source src="../assets/mp3/howtobeaboy.mp3" type="audio/mpeg"/>
-  </audio>   -->
+// 播放第一首歌
+function playSong1() {
+  song1.play();
+}
 
-<!-- <audio
-  controls
-  src="/assets/mp3/howtobeaboy.mp3">
-</audio> -->
+// 播放第二首歌
+function playSong2() {
+  song2.play();
+}
 
-<audio controls>
-  <source src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
+// 播放第三首歌
+function playSong3() {
+  song3.play();
+}
+</script> 
+
+<audio controls autoplay onended = "playSong2()">
+  <source id = 'song1' src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
 
@@ -40,8 +54,8 @@ permalink: /photo/
 
 ![i](/assets/image/photo_page/5.jpg) 
 
-<audio controls>
-  <source src="/assets/mp3/diane.mp3" type="audio/mpeg">
+<audio controls onended = "playSong3()">
+  <source id = 'song2' src="/assets/mp3/diane.mp3" type="audio/mpeg" >
   你的瀏覽器不支援 audio tag！
 </audio>
 
@@ -56,7 +70,7 @@ permalink: /photo/
 ![i](/assets/image/photo_page/10.jpg)   
 
 <audio controls>
-  <source src="/assets/mp3/marryme.mp3" type="audio/mpeg">
+  <source id = 'song3' src="/assets/mp3/marryme.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
 
