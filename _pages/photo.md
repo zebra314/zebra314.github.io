@@ -3,17 +3,17 @@ permalink: /photo/
 ---
   <style>
   body {
-    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg.jpeg');
+    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
     /* Full height */
-    height: 50%;
+    /* height: 50%; */
 
     /* Center and scale the image nicely */
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
     background-attachment: fixed;
-    background-size:100% 100vh;
+    /* background-size:100% 100vh; */
     
   }
   .songs{
