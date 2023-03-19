@@ -2,7 +2,7 @@
 permalink: /photo/
 ---
   <style>
-  @media (min-width: 501px){
+  @media (min-width: 1001px){
       body {
     background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
     /* Full height */
@@ -19,9 +19,9 @@ permalink: /photo/
     }
   }
 
-  @media (max-width: 500px){
+  @media (max-width: 1000px){
     body {
-    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_2.jpg');
+    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_6.jpg');
     /* Full height */
     /* height: 50%; */
 
