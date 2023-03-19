@@ -16,7 +16,19 @@ permalink: /photo/
     background-size:100% 100vh;
     
   }
+  .songs{
+    display: inline-block;
+  }
+
+  .mp3_thumbnail{
+    bottom:19px;
+    position:relative;
+    width:54px;
+    length:54px;
+  }
+
   </style>
+
 <script>
 // 获取音频元素
 var song1 = document.getElementById("song1");
@@ -37,11 +49,13 @@ song3.onended = function() {
 }
 
 </script> 
-
-<audio id='song1' controls autoplay preload="auto">
-  <source  src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
-  你的瀏覽器不支援 audio tag！
-</audio>
+<div class='songs'>
+  <img src='/assets/mp3/howtobeaboy.jpeg' class='mp3_thumbnail'/>
+  <audio id='song1' controls autoplay preload="auto">
+    <source  src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
 
 ![i](/assets/image/photo_page/1.JPG)  
   
@@ -53,10 +67,14 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/5.jpg) 
 
-<audio id='song2' controls preload="auto">
-  <source  src="/assets/mp3/diane.mp3" type="audio/mpeg" >
-  你的瀏覽器不支援 audio tag！
-</audio>
+
+<div class='songs'>
+  <img src='/assets/mp3/diane.jpeg' class='mp3_thumbnail'/>
+  <audio id='song2' controls preload="auto">
+    <source  src="/assets/mp3/diane.mp3" type="audio/mpeg" >
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
 
 ![i](/assets/image/photo_page/6.jpg)  
 
@@ -68,9 +86,19 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/10.jpg)   
 
-<audio id='song3' controls preload="auto">
+<audio id='song3' controls>
   <source  src="/assets/mp3/marryme.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
 
-![i](/assets/image/photo_page/11.JPG)   
+![i](/assets/image/photo_page/11.JPG)  
+
+<audio id='song4' controls>
+  <source  src="/assets/mp3/enjoy.mp3" type="audio/mpeg">
+  你的瀏覽器不支援 audio tag！
+</audio>
+
+<audio id='song5' controls>
+  <source  src="/assets/mp3/north.mp3" type="audio/mpeg">
+  你的瀏覽器不支援 audio tag！
+</audio>
