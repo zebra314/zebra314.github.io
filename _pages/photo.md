@@ -6,11 +6,13 @@ permalink: /photo/
       body {
     background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
     /* Full height */
-    /* height: 50%; */
+    height: 100%;
+    width:100%;
+    margin:0;
 
     /* Center and scale the image nicely */
     position: relative;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -23,11 +25,13 @@ permalink: /photo/
     body {
     background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_6.jpg');
     /* Full height */
-    /* height: 50%; */
+    height: 100%;
+    width: 100%;
+    margin:0;
 
     /* Center and scale the image nicely */
     position: relative;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
