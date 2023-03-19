@@ -1,5 +1,6 @@
 ---
 permalink: /photo/
+comments: true 
 ---
   <style>
   @media (min-width: 1001px){
@@ -37,7 +38,6 @@ permalink: /photo/
     background-attachment: fixed;
     /* background-size:100% 100vh; */
     }
-
   }
 
   .songs{
@@ -49,7 +49,10 @@ permalink: /photo/
     position:relative;
     width:35px;
     length:35px;
+    margin-right:10px;
   }
+
+
 
   </style>
 
@@ -110,19 +113,28 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/10.jpg)   
 
-<audio id='song3' controls>
-  <source  src="/assets/mp3/marryme.mp3" type="audio/mpeg">
-  你的瀏覽器不支援 audio tag！
-</audio>
+<div class='songs'>
+  <img src="/assets/mp3/marryme.jpeg" class='mp3_thumbnail'/>
+  <audio id='song3' controls>
+    <source  src="/assets/mp3/marryme.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
 
 ![i](/assets/image/photo_page/11.JPG)  
 
-<audio id='song4' controls>
-  <source  src="/assets/mp3/enjoy.mp3" type="audio/mpeg">
-  你的瀏覽器不支援 audio tag！
-</audio>
+<div class='songs'>
+  <img src='/assets/mp3/enjoy.jpeg' class='mp3_thumbnail'>
+  <audio id='song4' controls>
+    <source  src="/assets/mp3/enjoy.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
 
-<audio id='song5' controls>
-  <source  src="/assets/mp3/north.mp3" type="audio/mpeg">
-  你的瀏覽器不支援 audio tag！
-</audio>
+<div class='songs'>
+  <img src='/assets/mp3/north.jpeg' class='mp3_thumbnail'>
+  <audio id='song5' controls>
+    <source  src="/assets/mp3/north.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
