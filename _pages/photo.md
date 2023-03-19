@@ -38,8 +38,8 @@ song3.onended = function() {
 
 </script> 
 
-<audio controls autoplay preload="auto">
-  <source id = 'song1' src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
+<audio id='song1' controls autoplay preload="auto">
+  <source  src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
 
@@ -53,8 +53,8 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/5.jpg) 
 
-<audio controls preload="auto">
-  <source id = 'song2' src="/assets/mp3/diane.mp3" type="audio/mpeg" >
+<audio id='song2' controls preload="auto">
+  <source  src="/assets/mp3/diane.mp3" type="audio/mpeg" >
   你的瀏覽器不支援 audio tag！
 </audio>
 
@@ -68,8 +68,8 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/10.jpg)   
 
-<audio controls preload="auto">
-  <source id = 'song3' src="/assets/mp3/marryme.mp3" type="audio/mpeg">
+<audio id='song3' controls preload="auto">
+  <source  src="/assets/mp3/marryme.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
 
