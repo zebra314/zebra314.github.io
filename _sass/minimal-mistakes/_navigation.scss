@@ -177,7 +177,9 @@
   -ms-flex-align: center;
   align-items: center;
   min-height: $nav-height;
-  background: $background-color;
+
+  // make the bg of banner transparent
+  // background: $background-color;
 
   a {
     display: block;
