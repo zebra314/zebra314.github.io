@@ -2,7 +2,8 @@
 permalink: /photo/
 ---
   <style>
-  body {
+  @media (min-width: 501px){
+      body {
     background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
     /* Full height */
     /* height: 50%; */
@@ -15,7 +16,26 @@ permalink: /photo/
     background-attachment: fixed;
     /* background-size:100% 100vh; */
     
+    }
   }
+
+  @media (max-width: 500px){
+    body {
+    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_2.jpg');
+    /* Full height */
+    /* height: 50%; */
+
+    /* Center and scale the image nicely */
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-size:100% 100vh; */
+    }
+
+  }
+
   .songs{
     display: inline-block;
   }
@@ -23,8 +43,8 @@ permalink: /photo/
   .mp3_thumbnail{
     bottom:19px;
     position:relative;
-    width:54px;
-    length:54px;
+    width:35px;
+    length:35px;
   }
 
   </style>
