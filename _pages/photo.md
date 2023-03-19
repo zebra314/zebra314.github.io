@@ -23,23 +23,22 @@ var song1 = document.getElementById("song1");
 var song2 = document.getElementById("song2");
 var song3 = document.getElementById("song3");
 
-// 播放第一首歌
-function playSong1() {
-  song1.play();
-}
-
-// 播放第二首歌
-function playSong2() {
+song1.onended = function() {
   song2.play();
 }
 
-// 播放第三首歌
-function playSong3() {
+song2.onended = function() {
   song3.play();
 }
+
+// The last song
+song3.onended = function() {
+  song1.play();
+}
+
 </script> 
 
-<audio controls autoplay onended = "playSong2()">
+<audio controls autoplay preload="auto">
   <source id = 'song1' src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
@@ -54,7 +53,7 @@ function playSong3() {
 
 ![i](/assets/image/photo_page/5.jpg) 
 
-<audio controls onended = "playSong3()">
+<audio controls preload="auto">
   <source id = 'song2' src="/assets/mp3/diane.mp3" type="audio/mpeg" >
   你的瀏覽器不支援 audio tag！
 </audio>
@@ -69,7 +68,7 @@ function playSong3() {
 
 ![i](/assets/image/photo_page/10.jpg)   
 
-<audio controls>
+<audio controls preload="auto">
   <source id = 'song3' src="/assets/mp3/marryme.mp3" type="audio/mpeg">
   你的瀏覽器不支援 audio tag！
 </audio>
