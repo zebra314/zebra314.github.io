@@ -52,33 +52,12 @@ comments: true
     margin-right:10px;
   }
 
-
-
   </style>
 
-<script>
-// 获取音频元素
-var song1 = document.getElementById("song1");
-var song2 = document.getElementById("song2");
-var song3 = document.getElementById("song3");
-
-song1.onended = function() {
-  song2.play();
-}
-
-song2.onended = function() {
-  song3.play();
-}
-
-// The last song
-song3.onended = function() {
-  song1.play();
-}
-
-</script> 
+<!-- song1 -->
 <div class='songs'>
   <img src='/assets/mp3/howtobeaboy.jpeg' class='mp3_thumbnail'/>
-  <audio id='song1' controls autoplay preload="auto">
+  <audio id='song1' controls autoplay preload="auto" onended="playSong2()">
     <source  src="/assets/mp3/howtobeaboy.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
   </audio>
@@ -94,10 +73,10 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/5.jpg) 
 
-
+<!-- song2 -->
 <div class='songs'>
   <img src='/assets/mp3/diane.jpeg' class='mp3_thumbnail'/>
-  <audio id='song2' controls preload="auto">
+  <audio id='song2' controls preload="auto" onended="playSong3()">
     <source  src="/assets/mp3/diane.mp3" type="audio/mpeg" >
     你的瀏覽器不支援 audio tag！
   </audio>
@@ -113,9 +92,10 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/10.jpg)   
 
+<!-- song3 -->
 <div class='songs'>
   <img src="/assets/mp3/marryme.jpeg" class='mp3_thumbnail'/>
-  <audio id='song3' controls>
+  <audio id='song3' controls onended="playSong4()">
     <source  src="/assets/mp3/marryme.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
   </audio>
@@ -123,18 +103,50 @@ song3.onended = function() {
 
 ![i](/assets/image/photo_page/11.JPG)  
 
+<!-- song4 -->
 <div class='songs'>
   <img src='/assets/mp3/enjoy.jpeg' class='mp3_thumbnail'>
-  <audio id='song4' controls>
+  <audio id='song4' controls onended="playSong5()">
     <source  src="/assets/mp3/enjoy.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
   </audio>
 </div>
 
+<!-- current last -->
+<!-- song5 -->
 <div class='songs'>
   <img src='/assets/mp3/north.jpeg' class='mp3_thumbnail'>
-  <audio id='song5' controls>
+  <audio id='song5' controls onended="playSong1()">
     <source  src="/assets/mp3/north.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
   </audio>
 </div>
+
+<script>
+// 获取音频元素
+var song1 = document.getElementById("song1");
+var song2 = document.getElementById("song2");
+var song3 = document.getElementById("song3");
+var song4 = document.getElementById("song4");
+var song5 = document.getElementById("song5");
+
+function playSong2(){
+  song2.play();
+}
+
+function playSong3(){
+  song3.play();
+}
+
+function playSong4(){
+  song4.play();
+}
+
+function playSong5(){
+  song5.paly();
+}
+
+function playSong1(){
+  song1.play();
+}
+</script> 
