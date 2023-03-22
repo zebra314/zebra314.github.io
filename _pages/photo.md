@@ -2,7 +2,7 @@
 permalink: /photo/
 comments: true 
 ---
-  <style>
+<style>
   @media (min-width: 1001px){
       body {
     background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
@@ -13,12 +13,9 @@ comments: true
 
     /* Center and scale the image nicely */
     position: relative;
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* background-size:100% 100vh; */
-    
     }
   }
 
@@ -32,11 +29,9 @@ comments: true
 
     /* Center and scale the image nicely */
     position: relative;
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* background-size:100% 100vh; */
     }
   }
 
@@ -52,7 +47,7 @@ comments: true
     margin-right:10px;
   }
 
-  </style>
+</style>
 
 <!-- song1 -->
 <div class='songs'>
@@ -112,15 +107,45 @@ comments: true
   </audio>
 </div>
 
-<!-- current last -->
 <!-- song5 -->
 <div class='songs'>
   <img src='/assets/mp3/north.jpeg' class='mp3_thumbnail'>
-  <audio id='song5' controls onended="playSong1()">
+  <audio id='song5' controls onended="playSong6()">
     <source  src="/assets/mp3/north.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
   </audio>
 </div>
+
+<!-- song6 -->
+<div class='songs'>
+  <img src='/assets/mp3/fish.jpeg' class='mp3_thumbnail'>
+  <audio id='song6' controls onended="playSong7()">
+    <source  src="/assets/mp3/fish.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
+
+<!-- song7 -->
+<div class='songs'>
+  <img src='/assets/mp3/jankuoroad.jpeg' class='mp3_thumbnail'>
+  <audio id='song7' controls onended="playSong8()">
+    <source  src="/assets/mp3/jankuoroad.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
+
+<!-- current last song -->
+<!-- song8 -->
+<div class='songs'>
+  <img src='/assets/mp3/fraction.jpeg' class='mp3_thumbnail'>
+  <audio id='song8' controls onended="playSong1()">
+    <source  src="/assets/mp3/fraction.mp3" type="audio/mpeg">
+    你的瀏覽器不支援 audio tag！
+  </audio>
+</div>
+
+
+
 
 <script>
 // 获取音频元素
