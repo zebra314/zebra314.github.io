@@ -118,7 +118,7 @@ comments: true
 
 <!-- song6 -->
 <div class='songs'>
-  <img src='/assets/mp3/fish.jpeg' class='mp3_thumbnail'>
+  <img src='/assets/mp3/fish.jpg' class='mp3_thumbnail'>
   <audio id='song6' controls onended="playSong7()">
     <source  src="/assets/mp3/fish.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
@@ -127,7 +127,7 @@ comments: true
 
 <!-- song7 -->
 <div class='songs'>
-  <img src='/assets/mp3/jankuoroad.jpeg' class='mp3_thumbnail'>
+  <img src='/assets/mp3/jankuoroad.jpg' class='mp3_thumbnail'>
   <audio id='song7' controls onended="playSong8()">
     <source  src="/assets/mp3/jankuoroad.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
@@ -137,7 +137,7 @@ comments: true
 <!-- current last song -->
 <!-- song8 -->
 <div class='songs'>
-  <img src='/assets/mp3/fraction.jpeg' class='mp3_thumbnail'>
+  <img src='/assets/mp3/fraction.jpg' class='mp3_thumbnail'>
   <audio id='song8' controls onended="playSong1()">
     <source  src="/assets/mp3/fraction.mp3" type="audio/mpeg">
     你的瀏覽器不支援 audio tag！
@@ -171,6 +171,15 @@ function playSong5(){
   song5.paly();
 }
 
+function playSong6(){
+  song6.paly();
+}
+function playSong7(){
+  song7.paly();
+}
+function playSong8(){
+  song8.paly();
+}
 function playSong1(){
   song1.play();
 }
