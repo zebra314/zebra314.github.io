@@ -96,7 +96,8 @@ comments: true
   </audio>
 </div>
 
-![i](/assets/image/photo_page/11.JPG)  
+![i](/assets/image/photo_page/11.JPG)   
+![i](/assets/image/photo_page/12.JPG)
 
 <!-- song4 -->
 <div class='songs'>
