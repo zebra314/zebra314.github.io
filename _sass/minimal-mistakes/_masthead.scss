@@ -59,6 +59,15 @@
   font-size: $type-size-8;
 }
 
+/* 禁止文字換行 */
+.site-title a {
+  white-space: nowrap; 
+}
+
+.site-subtitle a {
+  white-space: nowrap; 
+}
+
 .masthead__menu {
   float: left;
   margin-left: 0;
@@ -92,3 +101,26 @@
     font-weight: 700;
   }
 }
+
+// Responsive navbar
+  @media(min-width: 751px) {
+    .navbar .toggle_btn {
+        display: none; /*hide the toggle button*/
+    }
+  }
+
+  @media(max-width: 750px) {
+    .navbar .links {
+        display: none; /*hide the links*/
+    }
+
+    .navbar .toggle_btn {
+        display: block; /*show the toggle button*/
+    }
+
+    .dropdown_menu {
+        display: block;
+        left: 2rem;
+        width: unset;
+    }
+  }

@@ -1,6 +1,175 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
+<script src="https://kit.fontawesome.com/b5ce6dfdfd.js" crossorigin="anonymous"></script>
 
 <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
+
+        <div class="navbar">
+          <ul class="links">
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/project/' | relative_url }}">Project</a></li>
+            <li><a href="{{ '/photo/' | relative_url }}">Photo</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          </ul>
+
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars" style="color: #02d7f2;"></i>
+          </div>
+
+          <div class="dropdown_menu">
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/project/' | relative_url }}">Project</a></li>
+            <li><a href="{{ '/photo/' | relative_url }}">Photo</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </div>
+</div>
+
+<style>
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .greedy-nav a{
+    white-space: nowrap;
+  }
+
+  .navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0;
+
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding-right: 2em;
+    font-weight: 700;
+  }
+
+  .navbar .links {
+    display: flex;
+    /*place the links in a row*/
+    gap: 0.2rem;
+  }
+
+  /* Fail to add hover effect */
+  /* .navbar .links::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+  transform: scaleX(0) translate3d(0, 0, 0);
+}
+
+.navbar .links:hover::before {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1); 
+} */
+
+  .navbar .toggle_btn {
+    display: none;
+    /*hide the toggle button*/
+  }
+
+
+  /* Dropdown menu */
+  .dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    height: 0;
+
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dropdown_menu.open {
+    height: 240px;
+  }
+
+  .dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    /*垂直居中*/
+    justify-content: center;
+  }
+
+  /* Respponsive navbar */
+  @media(min-width: 751px) {
+    .navbar .toggle_btn {
+      display: none;
+      /*hide the toggle button*/
+    }
+  }
+
+  @media(max-width: 750px) {
+    .navbar .links {
+      display: none;
+      /*hide the links*/
+    }
+
+    /*show the toggle button*/
+    .navbar .toggle_btn {
+      display: block;
+      
+    }
+
+    .dropdown_menu {
+      display: block;
+      left: 2rem;
+      width: unset;
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const toggleBtnIcon = document.querySelector('.toggle_btn i');
+  const dropdown_menu = document.querySelector('.dropdown_menu');
+
+  toggleBtn.onclick = function () {
+    dropdown_menu.classList.toggle('open');
+    const isOpen = dropdown_menu.classList.contains('open');
+
+    toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-times'
+      : 'fa-solid fa-bars'
+  }
+</script>
+
+<!-- <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
@@ -32,4 +201,4 @@
       </nav>
     </div>
   </div>
-</div>
+</div> -->
