@@ -1,6 +1,7 @@
 ---
 header:
     teaser: /assets/image/photo_page/11.JPG
+tag: devlog
 ---
 
 ## 深夜節目
