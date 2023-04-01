@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b5ce6dfdfd.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="site-title"><a herf="#">A Blog</a></div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Photo</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars" style="color: #02d7f2;"></i>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Photo</a></li>
+                <li><a href="#">About</a></li>
+            </div>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropdown_menu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropdown_menu.classList.toggle('open');
+            const isOpen = dropdown_menu.classList.contains('open');
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-times'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+<style>
+    body {
+        background-color: #000;
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    header {
+        position: relative;
+        padding: 0 2rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        width: 100%;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+
+    .navbar .links {
+        display: flex;
+        /*place the links in a row*/
+        gap: 2rem;
+    }
+
+    .navbar .toggle_btn {
+        display: none;
+        /*hide the toggle button*/
+    }
+
+
+    /* Dropdown menu */
+    .dropdown_menu {
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        width: 300px;
+
+        background: rgb(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        height: 0;
+
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .dropdown_menu.open {
+        height: 205px;
+    }
+
+    .dropdown_menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        /*垂直居中*/
+        justify-content: center;
+    }
+
+    /* Respponsive navbar */
+    @media(min-width: 751px) {
+        .navbar .toggle_btn {
+            display: none;
+            /*hide the toggle button*/
+        }
+    }
+
+    @media(max-width: 750px) {
+        .navbar .links {
+            display: none;
+            /*hide the links*/
+        }
+
+        .navbar .toggle_btn {
+            display: block;
+            /*show the toggle button*/
+        }
+
+        .dropdown_menu {
+            display: block;
+            left: 2rem;
+            width: unset;
+        }
+    }
+</style>
+
+</html>
