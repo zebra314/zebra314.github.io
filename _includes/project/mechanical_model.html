@@ -43,7 +43,6 @@
         var scene, renderer;
         var camera;
         var mesh;
-
         var isMouseDown = false;
 
         function init() {
@@ -53,13 +52,14 @@
 
             //カメラを作成
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            camera.position.z = 25;
-            camera.position.y = 15;
+            camera.position.set(40, -40, 70);
+            camera.rotation.z += Math.PI;
 
             //レンダラーを作成
             renderer = new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
+
             //背景色を設定
             renderer.setClearColor(0x00ffff, 1);
             renderer.gammaOutput = true;
@@ -101,9 +101,7 @@
                 },
                 // called when loading has errors
                 function (error) {
-
                     console.log('An error happened');
-
                 }
             );
 
@@ -133,9 +131,8 @@
             if (isMouseDown) {
                 // 3DモデルをX軸とY軸方向に回転させます
                 if (mesh) {
-                    mesh.rotation.y = getMouseX(event) / 50;
-                    mesh.rotation.x = getMouseY(event) / 50;
-
+                    camera.rotation.y = getMouseX(event) / 50;
+                    camera.rotation.x = getMouseY(event) / 50;
                 }
             }
         }
