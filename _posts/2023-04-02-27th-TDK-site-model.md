@@ -11,6 +11,6 @@ Originally, the only file format that solidworks can export to three.js is .3mf.
 Hopefully, after a hard time of searching, I found a plugin developed by simlab that can export .gltf file from solidworks. After three days of trying, I finally loaded the model into my blog site.
 
 <p align="center">
-    <iframe src="https://zebra314.github.io/project/27th_TDK_site_model" width="600" height="400" ></iframe>
+    <iframe src="/project/27th_TDK_site_model" width="600" height="400" ></iframe>
 </p>
 [View in full page](/project/27th_TDK_site_model){:target="_blank"}
