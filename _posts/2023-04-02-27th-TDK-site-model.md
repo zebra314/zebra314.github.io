@@ -10,7 +10,13 @@ Originally, the only file format that solidworks can export to three.js is .3mf.
 
 Hopefully, after a hard time of searching, I found a plugin developed by simlab that can export .gltf file from solidworks. After three days of trying, I finally loaded the model into my blog site.
 
+<style>
+    .preview_model {
+        width: 100%;
+        height: 30vh;
+    }
+</style>
 <p align="center">
-    <iframe src="/project/27th_TDK_site_model" width="600" height="400" ></iframe>
+    <iframe class='preview_model' src="/project/27th_TDK_site_model"></iframe>
 </p>
 [View in full page](/project/27th_TDK_site_model){:target="_blank"}
