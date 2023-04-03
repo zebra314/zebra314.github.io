@@ -43,7 +43,8 @@
             camera.position.set(0, 30, 40);
             camera.rotation.z += Math.PI;
 
-            renderer = new THREE.WebGLRenderer();
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setPixelRatio( window.devicePixelRatio );
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
 
