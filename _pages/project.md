@@ -5,4 +5,4 @@ title: Project
 
 ## Lab
 [responsive_navbar](/project/responsive_navbar){:target="_blank"}   
-[27th TDK](/project/mechanical_model){:target="_blank"}  
+[27th TDK](/project/27th_TDK_site_model){:target="_blank"}  
