@@ -35,8 +35,11 @@
             camera.position.set(0, 40, 50);
             camera.rotation.z += Math.PI;
             scene = new THREE.Scene();
-            // lights
-            const ambient = new THREE.AmbientLight(0xff9933, 0.1);
+            // light
+            var light = new THREE.DirectionalLight("#c1582d", 1);
+            var ambient = new THREE.AmbientLight("#85b2cd");
+            light.position.set(0, 80, 0).normalize();
+            scene.add(light);
             scene.add(ambient);
             renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setPixelRatio(window.devicePixelRatio);
@@ -44,6 +47,9 @@
             // renderer.toneMapping = THREE.ACESFilmicToneMapping;
             renderer.toneMappingExposure = 1;
             // renderer.outputEncoding = THREE.sRGBEncoding;
+            // background
+            renderer.setClearColor(0x00ffff, 1);
+            renderer.gammaOutput = true;
             container.appendChild(renderer.domElement);
             renderer.shadowMap.enabled = true;
             renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -57,23 +63,27 @@
             controls.maxPolarAngle = Math.PI / 2;
             controls.enablePan = false;
             controls.update();
-            new RGBELoader().setPath('../models/').load('royal_esplanade_1k.hdr', function (texture) {
-                texture.mapping = THREE.EquirectangularReflectionMapping;
-                scene.background = texture;
-                scene.environment = texture;
-                // model
-                const loader = new GLTFLoader().setPath('../models/');
-                loader.load('TDK_27th.glb', function (gltf) {
-                    gltf.scene.scale.set(10, 10, 10);
-                    gltf.scene.position.set(-39, 0, 38);
-                    gltf.scene.rotation.x += Math.PI / 2;
-                    gltf.scene.castShadow = true; //default is false
-                    gltf.scene.receiveShadow = true; //default
-                    scene.add(gltf.scene);
-                    render();
-                });
+            // new RGBELoader().setPath('../models/').load('royal_esplanade_1k.hdr', function (texture) {
+            //     texture.mapping = THREE.EquirectangularReflectionMapping;
+            //     scene.background = texture;
+            //     scene.environment = texture;
+
+            // });
+
+            // model
+            const loader = new GLTFLoader().setPath('../models/');
+            loader.load('TDK_27th.glb', function (gltf) {
+                gltf.scene.scale.set(10, 10, 10);
+                gltf.scene.position.set(-39, 0, 38);
+                gltf.scene.rotation.x += Math.PI / 2;
+                gltf.scene.castShadow = true; //default is false
+                gltf.scene.receiveShadow = true; //default
+                scene.add(gltf.scene);
+                render();
             });
+
             window.addEventListener('resize', onWindowResize);
+
         }
         function onWindowResize() {
             camera.aspect = window.innerWidth / window.innerHeight;
