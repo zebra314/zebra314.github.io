@@ -174,17 +174,17 @@ function playSong4(){
 }
 
 function playSong5(){
-  song5.paly();
+  song5.play();
 }
 
 function playSong6(){
-  song6.paly();
+  song6.play();
 }
 function playSong7(){
-  song7.paly();
+  song7.play();
 }
 function playSong8(){
-  song8.paly();
+  song8.play();
 }
 function playSong1(){
   song1.play();
