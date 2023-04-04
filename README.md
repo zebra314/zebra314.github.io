@@ -29,3 +29,11 @@ bundle exec jekyll serve
     > 在new_project.md中設置的layout
 
     > 不須每個project都寫一個新的
+
+##  review
+> bundle
+> bundle install --path vendor/bundle
+> bundle config set --local path 'vendor/bundle'
+
+
+> bundle exec jekyll serve
