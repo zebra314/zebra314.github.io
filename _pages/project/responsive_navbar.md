@@ -1,5 +1,5 @@
 ---
 permalink: /project/responsive_navbar
-layout: project.html
+layout: project
 ---
 {% include project/responsive_navbar.html %}
