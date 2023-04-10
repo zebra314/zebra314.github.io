@@ -79,24 +79,25 @@
             // controls.maxPolarAngle = Math.PI / 2;
             controls.enablePan = false;
             controls.update();
-            // new RGBELoader().setPath('../models/').load('royal_esplanade_1k.hdr', function (texture) {
-            //     texture.mapping = THREE.EquirectangularReflectionMapping;
-            //     scene.background = texture;
-            //     scene.environment = texture;
+            new RGBELoader().setPath('../models/').load('fireplace_4k.hdr', function (texture) {
+                texture.mapping = THREE.EquirectangularReflectionMapping;
+                scene.background = texture;
+                scene.environment = texture;
+                // model
+                const loader = new GLTFLoader().setPath('../models/');
+                loader.load('robot_1.glb', function (gltf) {
+                    gltf.scene.scale.set(20, 20, 20);
+                    gltf.scene.position.set(0, -1, 0);
+                    // gltf.scene.rotation.x += Math.PI / 2;
+                    gltf.scene.castShadow = true; //default is false
+                    gltf.scene.receiveShadow = true; //default
+                    scene.add(gltf.scene);
+                    render();
+                });
 
-            // });
-
-            // model
-            const loader = new GLTFLoader().setPath('../models/');
-            loader.load('robot_1.glb', function (gltf) {
-                gltf.scene.scale.set(20, 20, 20);
-                gltf.scene.position.set(0, -1, 0);
-                // gltf.scene.rotation.x += Math.PI / 2;
-                gltf.scene.castShadow = true; //default is false
-                gltf.scene.receiveShadow = true; //default
-                scene.add(gltf.scene);
-                render();
             });
+
+
 
             window.addEventListener('resize', onWindowResize);
 
