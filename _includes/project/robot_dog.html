@@ -36,10 +36,23 @@
             camera.rotation.z += Math.PI;
             scene = new THREE.Scene()
             // light
-            var light = new THREE.DirectionalLight("#c1582d", 2);
-            var ambient = new THREE.AmbientLight("#85b2cd");
-            light.position.set(50, 50, 50).normalize();
-            scene.add(light);
+            var light_1 = new THREE.DirectionalLight("#6ECBF5", 0.6);
+            light_1.position.set(-300, -300, -300).normalize();
+            var light_2 = new THREE.DirectionalLight("#C252E1", 0.5);
+            light_2.position.set(300, 300, 300).normalize();
+            var light_3 = new THREE.DirectionalLight("#E0D9F6", 0.6);
+            light_3.position.set(300, 0, 0).normalize();
+            var light_4 = new THREE.DirectionalLight("#586AE2", 0.65);
+            light_4.position.set(0, 300, 200).normalize();
+            var light_5 = new THREE.DirectionalLight("#2A2356", 0.65);
+            light_5.position.set(200, -300, 0).normalize();
+            var ambient = new THREE.AmbientLight('#E0D9F6', 0.6);
+
+            scene.add(light_1);
+            scene.add(light_2);
+            scene.add(light_3);
+            scene.add(light_4);
+            scene.add(light_5);
             scene.add(ambient);
             // Show the axis
             // var axesHelper = new THREE.AxesHelper(5);
