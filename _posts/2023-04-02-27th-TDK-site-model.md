@@ -4,11 +4,11 @@ header:
 tag: devlog
 ---
 
-This model was built by Gavin Jhen, it would be used for the simulation of the 27th TDK robocon competition.I thought it would be helpful for coming up the idea of the mechanism if we can view the site of the competition conveniently. Therefore, I decided to transfer the model of the site to this online web page.
+This model was built by Gavin Jhen and will be used for simulating the 27th TDK Robocon competition. I believe that having a convenient way to view the competition site could help generate ideas for the mechanism. Therefore, I decided to transfer the site model to this online web page.
 
-Originally, the only file format that solidworks can export to three.js is .3mf. However, the 3MFloader keeps return error while testing. Then, I decide to try another format called .gltf, which is normally used in loading 3D model in web, but not supported by solidworks. 
+Initially, SolidWorks could only export the model to the .3mf format for use in three.js. However, I encountered an error with the 3MFloader during testing. Consequently, I decided to try another format called .gltf, which is typically used for loading 3D models on the web but is not supported by SolidWorks.
 
-Hopefully, after a hard time of searching, I found a plugin developed by simlab that can export .gltf file from solidworks. After three days of trying, I finally succeeded to load the model.
+After an exhaustive search, I found a plugin developed by Simlab that can export .gltf files from SolidWorks. After three days of trying, I finally succeeded in loading the model.
 
 <style>
     .preview_model {
