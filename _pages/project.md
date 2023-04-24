@@ -11,28 +11,69 @@ title: Project
     }
 </style>
 
-## Lab
-[responsive_navbar](/project/responsive_navbar){:target="_blank"}
-<p align="center">
-    <iframe class='preview_model' src="/project/responsive_navbar"></iframe>
-</p>
-   
-[27th TDK](/project/27th_TDK_site_model){:target="_blank"}
-<p align="center">
-    <iframe class='preview_model' src="/project/27th_TDK_site_model"></iframe>
-</p>
+## 2023
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/responsive_navbar" rel="permalink">responsive_navbar</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/responsive_navbar" target="_blank">
+                <img src="/assets/image/project/responsive_navbar.png">
+            </a>
+        </div>
+    </article>
+</div>
 
-[robot dog](/project/robot_dog){:target="_blank"}
-<p align="center">
-    <iframe class='preview_model' src="/project/robot_dog"></iframe>
-</p>
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/27th_TDK_site_model" rel="permalink">27th_TDK_site_model</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/27_TDK_site_model" target="_blank">
+                <img src="/assets/image/project/27th_TDK_site_model.png">
+            </a>
+        </div>
+    </article>
+</div>
 
-[room_308_pointcloud](/project/room_308_pointcloud){:target="_blank"}  
-<p align="center">
-    <iframe class='preview_model' src="/project/room_308_pointcloud"></iframe>
-</p>
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/robot_dog" rel="permalink">robot_dog</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/robot_dog" target="_blank">
+                <img src="/assets/image/project/robot_dog.png">
+             </a>
+        </div>
+    </article>
+</div>
 
-[room_308_HD](/project/room_308_HD){:target="_blank"}
-<p align="center">
-    <iframe class='preview_model' src="/project/room_308_HD"></iframe>
-</p>
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/room_308_pointcloud" rel="permalink">room_308_pointcloud</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/room_308_pointcloud" target="_blank">
+                <img src="/assets/image/project/room_308_pointcloud.png">
+            </a>
+        </div>
+    </article>
+</div>
+
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/room_308_HD" rel="permalink">room_308_HD</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/room_308_HD" target="_blank">
+                <img src="/assets/image/project/room_308_HD.png">
+            </a>
+        </div>
+    </article>
+</div>
+
