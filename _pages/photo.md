@@ -114,7 +114,7 @@ comments: true
 ![i](/assets/image/photo_page/112arch/3.jpg)
 ![i](/assets/image/photo_page/112arch/4.jpg)
 ![i](/assets/image/photo_page/112arch/5.jpg)
-![i](/assets/image/photo_page/112arch/6.jpg)
+![i](/assets/image/photo_page/112arch/7.jpg)
 <!-- song5 -->
 <div class='songs'>
   <img src='/assets/mp3/north.jpeg' class='mp3_thumbnail'>
@@ -124,11 +124,11 @@ comments: true
   </audio>
 </div>
 
-![i](/assets/image/photo_page/112arch/7.jpg)
-![i](/assets/image/photo_page/112arch/8.jpg)
 ![i](/assets/image/photo_page/112arch/9.jpg)
-![i](/assets/image/photo_page/112arch/10.jpg)
 ![i](/assets/image/photo_page/112arch/11.jpg)
+![i](/assets/image/photo_page/112arch/12.jpg)
+![i](/assets/image/photo_page/112arch/14.jpg)
+![i](/assets/image/photo_page/112arch/15.jpg)
 <!-- song6 -->
 <div class='songs'>
   <img src='/assets/mp3/fish.jpg' class='mp3_thumbnail'>
@@ -138,11 +138,11 @@ comments: true
   </audio>
 </div>
 
-![i](/assets/image/photo_page/112arch/12.jpg)
-![i](/assets/image/photo_page/112arch/13.jpg)
-![i](/assets/image/photo_page/112arch/14.jpg)
-![i](/assets/image/photo_page/112arch/15.jpg)
 ![i](/assets/image/photo_page/112arch/16.jpg)
+![i](/assets/image/photo_page/112arch/17.jpg)
+![i](/assets/image/photo_page/112arch/18.jpg)
+![i](/assets/image/photo_page/112arch/19.jpg)
+![i](/assets/image/photo_page/112arch/20.jpg)
 <!-- song7 -->
 <div class='songs'>
   <img src='/assets/mp3/jankuoroad.jpg' class='mp3_thumbnail'>
@@ -152,11 +152,7 @@ comments: true
   </audio>
 </div>
 
-![i](/assets/image/photo_page/112arch/17.jpg)
-![i](/assets/image/photo_page/112arch/18.jpg)
-![i](/assets/image/photo_page/112arch/19.jpg)
-![i](/assets/image/photo_page/112arch/20.jpg)
-![i](/assets/image/photo_page/112arch/21.jpg)
+![i](/assets/image/photo_page/112arch/22.jpg)
 <!-- current last song -->
 <!-- song8 -->
 <div class='songs'>
@@ -167,7 +163,7 @@ comments: true
   </audio>
 </div>
 
-![i](/assets/image/photo_page/112arch/22.jpg)
+
 
 
 
