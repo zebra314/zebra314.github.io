@@ -46,7 +46,7 @@ function init() {
     controls.update();
 
     new RGBELoader()
-        .setPath('../models/')
+        .setPath('../project_lib/models/')
         .load('royal_esplanade_1k.hdr', function (texture) {
 
             texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -58,7 +58,7 @@ function init() {
 
             // model
 
-            const loader = new GLTFLoader().setPath('../models/');
+            const loader = new GLTFLoader().setPath('../project_lib/models/');
             loader.load('TDK_27th.glb', function (gltf) {
 
                 gltf.scene.scale.set(10, 10, 10);

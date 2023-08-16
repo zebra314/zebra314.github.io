@@ -63,7 +63,7 @@
             controls.maxPolarAngle = Math.PI / 2;
             controls.enablePan = false;
             controls.update();
-            // new RGBELoader().setPath('../models/').load('royal_esplanade_1k.hdr', function (texture) {
+            // new RGBELoader().setPath('../project_lib/models/').load('royal_esplanade_1k.hdr', function (texture) {
             //     texture.mapping = THREE.EquirectangularReflectionMapping;
             //     scene.background = texture;
             //     scene.environment = texture;
@@ -71,7 +71,7 @@
             // });
 
             // model
-            const loader = new GLTFLoader().setPath('../models/');
+            const loader = new GLTFLoader().setPath('../project_lib/models/');
             loader.load('TDK_27th.glb', function (gltf) {
                 gltf.scene.scale.set(10, 10, 10);
                 gltf.scene.position.set(-39, 0, 38);

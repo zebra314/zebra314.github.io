@@ -67,7 +67,7 @@
             controls.maxPolarAngle = Math.PI / 2;
             controls.enablePan = true;
             controls.update();
-            // new RGBELoader().setPath('../models/').load('royal_esplanade_1k.hdr', function (texture) {
+            // new RGBELoader().setPath('../project_lib/models/').load('royal_esplanade_1k.hdr', function (texture) {
             //     texture.mapping = THREE.EquirectangularReflectionMapping;
             //     scene.background = texture;
             //     scene.environment = texture;
@@ -75,7 +75,7 @@
             // });
 
             // model
-            const loader = new PLYLoader().setPath('../models/');
+            const loader = new PLYLoader().setPath('../project_lib/models/');
             loader.load('room_308.ply', function (geometry) {
                 geometry.computeVertexNormals()
                 const material = new THREE.PointsMaterial({ size: 0.01, vertexColors: true });

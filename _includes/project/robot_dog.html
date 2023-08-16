@@ -79,12 +79,12 @@
             // controls.maxPolarAngle = Math.PI / 2;
             controls.enablePan = false;
             controls.update();
-            new RGBELoader().setPath('../models/').load('fireplace_4k.hdr', function (texture) {
+            new RGBELoader().setPath('../project_lib/models/').load('fireplace_4k.hdr', function (texture) {
                 texture.mapping = THREE.EquirectangularReflectionMapping;
                 scene.background = texture;
                 scene.environment = texture;
                 // model
-                const loader = new GLTFLoader().setPath('../models/');
+                const loader = new GLTFLoader().setPath('../project_lib/models/');
                 loader.load('robot_1.glb', function (gltf) {
                     gltf.scene.scale.set(20, 20, 20);
                     gltf.scene.position.set(0, -1, 0);

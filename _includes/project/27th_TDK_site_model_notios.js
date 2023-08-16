@@ -61,7 +61,7 @@ function init() {
 
     // Load a glTF resource
     loader.load(
-        '../models/TDK_27th.glb',
+        '../project_lib/models/TDK_27th.glb',
         function (gltf) {
 
             mesh = gltf.scene;
