@@ -77,3 +77,16 @@ title: Project
     </article>
 </div>
 
+<div>
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title no_toc" itemprop="headline">
+            <a href="/project/virtual_joy" rel="permalink">virtual_joy</a>
+        </h2>
+        <div class="thumbnail-container">
+            <a href="/project/virtual_joy" target="_blank">
+                <img src="/assets/image/project/room_308_HD.png">
+            </a>
+        </div>
+    </article>
+</div>
+
