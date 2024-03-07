@@ -81,6 +81,14 @@ This webite is built to record my daily life and put some shitposts.Please feel 
       </li>
       <li>
         <div class="timeline-content">
+          <h3 class="date">February, 2024</h3>
+          <h1>Visit Australia</h1>
+          <p> 
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-content">
           <h3 class="date">August, 2024</h3>
           <h1>Exchange student @ KTH, Sweden</h1>
           <p> 
