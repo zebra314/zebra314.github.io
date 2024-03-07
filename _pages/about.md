@@ -16,8 +16,8 @@ This webite is built to record my daily life and put some shitposts.Please feel 
       <li>
         <div class="timeline-content">
           <h3 class="date">July, 2003</h3>
-          <h1>Begining</h1>
-          <p>Born in Vancouver, Canada and moved back to Taiwan soon.</p>
+          <h1>Born</h1>
+          <!-- <p>Born in Vancouver, Canada and moved back to Taiwan soon.</p> -->
         </div>
       </li>
       <li>
@@ -59,6 +59,30 @@ This webite is built to record my daily life and put some shitposts.Please feel 
         <div class="timeline-content">
           <h3 class="date">January, 2023</h3>
           <h1>Build up this website</h1>
+          <p> 
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-content">
+          <h3 class="date">July, 2023</h3>
+          <h1>Intern @ ITRI ROBOT LAB</h1>
+          <p> 
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-content">
+          <h3 class="date">July, 2023</h3>
+          <h1>Visit Lanyu</h1>
+          <p> 
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-content">
+          <h3 class="date">August, 2024</h3>
+          <h1>Exchange student @ KTH, Sweden</h1>
           <p> 
           </p>
         </div>
