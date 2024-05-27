@@ -4,7 +4,7 @@ build:
 	docker build -t jekyll:latest .
 
 run:
-	docker run -it \
+	docker run --rm -it \
 		--net=host \
 		--name jekyll \
 		--ulimit nofile=1024:524288 \
@@ -12,7 +12,6 @@ run:
 		jekyll:latest
 
 clean:
-	docker container rm jekyll
 	docker rmi jekyll:latest
 
 attach:
