@@ -1,5 +1,37 @@
 # Jekyll
 
+## Usage
+
+Test the jekyll site locally
+
+```sh
+make
+```
+
+Build the docker image
+
+```sh
+make build
+```
+
+Run the docker image
+
+```sh
+make run
+```
+
+Attach to the running container
+
+```sh
+make attach
+```
+
+Clean up the docker image
+
+```sh
+make clean
+```
+
 ## New Project setup
 
 1. ``` _pages/project/new_project.md ```  
@@ -23,15 +55,3 @@
 3. ```layouts/project.html```
     - 在new_project.md中設置的layout
     - 不須每個project都寫一個新的
-
-## Review
-
-```bash
-# install
-bundle
-bundle install --path vendor/bundle
-bundle config set --local path 'vendor/bundle'
-
-# local test
-bundle exec jekyll serve
-```
