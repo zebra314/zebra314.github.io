@@ -16,4 +16,4 @@ clean:
 	docker rmi jekyll:latest
 
 attach:
-	-docker exec -it jekyll /bin/zsh
+	-docker exec -it jekyll /bin/bash
