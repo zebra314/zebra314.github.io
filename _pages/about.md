@@ -3,11 +3,9 @@ permalink: /about/
 ---
 
 ## Brief
-I am Ying Pei Lin, curently live in Hsinchu City, majoring in Mechanical Engineering at NYCU.  
+I am Ying Pei Lin, curently live in Stockholm, Sweden. I am a exchange student at KTH Royal Institute of Technology. I am majoring in mechanical engineering and I am interested in robotics and automation.
 
-Beside my mojor, I also find myself interested in programming a lot and plan to double major in computer science.
-
-This webite is built to record my daily life and put some shitposts.Please feel free to contact me.
+This webite is built to record my daily life and put some shitposts. Please feel free to contact me.
 
 ## Time line
 <div class="container">
