@@ -1,4 +1,4 @@
-all: build run clean
+all: build run
 
 build:
 	docker build -t jekyll:latest .
