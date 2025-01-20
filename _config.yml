@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "default"  "air", "aqua", "contrast", "dark",
 locale                   : "en-US"
 title                    : "A Blog"
 title_separator          : "-"
-subtitle                 : "Version 1.0" # site tagline that appears below site title in masthead
+subtitle                 : "Version 2.0" # site tagline that appears below site title in masthead
 name                     : "zebra314"
 description              : "An amazing website."
 url                      : "https://zebra314.github.io"
