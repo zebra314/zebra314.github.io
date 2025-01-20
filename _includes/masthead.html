@@ -73,19 +73,10 @@
     gap: 0.2rem;
   }
 
-  /* Enhance clickable area*/
-  .dropdown_menu a {
-    display: block;
-    padding: 5px 20px;
-    width: 100%;
-    text-align: center;
-  }
-
   .navbar .toggle_btn {
     display: none;
     /*hide the toggle button*/
   }
-
 
   /* Dropdown menu */
   .dropdown_menu {
@@ -95,48 +86,59 @@
     top: 90px;
     background: #eeeeee;
     backdrop-filter: blur(15px);
-
     overflow: hidden;
-
     height: 0;
+    transition: height 0.5s cubic-bezier(.25, 1, .30, 1);
+  }
 
-    transition: height 0.7s cubic-bezier(.25, 1, .30, 1);
+  .dropdown_menu li {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+
+  .dropdown_menu a {
+    display: block;
+    padding: 5px 20px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .dropdown_menu.open {
-    /* height: 241px; */
-    height: calc(100vh - 90px); /* Cover the rest of the screen */
+    height: calc(100vh - 90px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
 
-  .dropdown_menu li {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px;
+  .dropdown_menu.open li {
+    visibility: visible;
   }
 
-  /* Respponsive navbar */
+  .dropdown_menu.open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Media queries remain the same */
   @media(min-width: 751px) {
     .navbar .toggle_btn {
       display: none;
-      /*hide the toggle button*/
     }
   }
 
   @media(max-width: 750px) {
     .navbar .links {
       display: none;
-      /*hide the links*/
     }
 
-    /*show the toggle button*/
     .navbar .toggle_btn {
       display: block;
-
     }
 
     .dropdown_menu {
@@ -150,17 +152,34 @@
 <script>
   const toggleBtn = document.querySelector('.toggle_btn');
   const toggleBtnIcon = document.querySelector('.toggle_btn i');
-  const dropdown_menu = document.querySelector('.dropdown_menu');
+  const dropdownMenu = document.querySelector('.dropdown_menu');
+  const menuItems = dropdownMenu.querySelectorAll('a');
 
   toggleBtn.onclick = function () {
-    dropdown_menu.classList.toggle('open');
-    const isOpen = dropdown_menu.classList.contains('open');
+    if (dropdownMenu.classList.contains('open')) {
+      // First, fade out the text
+      menuItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(-10px)';
+      });
 
-    toggleBtnIcon.classList = isOpen
-      ? 'fa-solid fa-times'
-      : 'fa-solid fa-bars'
-
-    // Prevent body scrolling when the dropdown menu is open
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+      // Wait for fade out animation to complete before closing menu
+      setTimeout(() => {
+        dropdownMenu.classList.remove('open');
+        document.body.style.overflow = 'auto';
+        toggleBtnIcon.classList = 'fa-solid fa-bars';
+      }, 300);
+    } else {
+      // Open menu
+      dropdownMenu.classList.add('open');
+      toggleBtnIcon.classList = 'fa-solid fa-times';
+      document.body.style.overflow = 'hidden';
+      
+      // Fade in items after menu opens
+      menuItems.forEach(item => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+      });
+    }
   }
 </script>
