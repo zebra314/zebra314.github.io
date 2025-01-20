@@ -74,10 +74,15 @@
 }
 
 .thumbnail-container img {
-  height: 380px;
+  max-height: 450px;
+  height: auto;
   width: 100%;
   object-fit: cover;  
   object-position: center;
+
+  @media (max-width: 600px) { // Adjust the max-width value as needed
+    max-height: 100vw; // Set max-height to be equal to the viewport width
+  }
 }
 
 .thumbnail-container img{
