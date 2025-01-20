@@ -21,7 +21,7 @@
           </ul>
 
           <div class="toggle_btn">
-            <i class="fa-solid fa-bars" style="color: #02d7f2;"></i>
+            <i class="fa-solid fa-bars" style="color: #222831;"></i>
           </div>
 
           <div class="dropdown_menu">
@@ -54,7 +54,6 @@
 
   .navbar {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0;
@@ -77,27 +76,10 @@
   /* Enhance clickable area*/
   .dropdown_menu a {
     display: block;
-    /* align-items: center; */
-    padding: 5px 100px;
+    padding: 5px 20px;
+    width: 100%;
+    text-align: center;
   }
-
-  /* Fail to add hover effect */
-  /* .navbar .links::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  -webkit-transform: scaleX(0) translate3d(0, 0, 0);
-  transform: scaleX(0) translate3d(0, 0, 0);
-}
-
-.navbar .links:hover::before {
-  -webkit-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1); 
-} */
 
   .navbar .toggle_btn {
     display: none;
@@ -107,24 +89,23 @@
 
   /* Dropdown menu */
   .dropdown_menu {
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
-
-    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 90px;
+    background: #eeeeee;
     backdrop-filter: blur(15px);
 
-    border-radius: 10px;
     overflow: hidden;
 
     height: 0;
 
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 0.7s cubic-bezier(.25, 1, .30, 1);
   }
 
   .dropdown_menu.open {
-    height: 241px;
+    /* height: 241px; */
+    height: calc(100vh - 90px); /* Cover the rest of the screen */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -160,8 +141,8 @@
 
     .dropdown_menu {
       display: block;
-      left: 2rem;
-      width: unset;
+      left: 0;
+      width: 100%;
     }
   }
 </style>
@@ -178,39 +159,8 @@
     toggleBtnIcon.classList = isOpen
       ? 'fa-solid fa-times'
       : 'fa-solid fa-bars'
+
+    // Prevent body scrolling when the dropdown menu is open
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }
 </script>
-
-<!-- <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
-        {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
-          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
-        </a>
-        <ul class="visible-links">
-          {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
-          {%- endfor -%}
-        </ul>
-        {% if site.search == true %}
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
-        </button>
-        {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div> -->
