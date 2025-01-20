@@ -7,16 +7,9 @@
    ========================================================================== */
 
 .sidebar {
-  @include clearfix();
-  // @include breakpoint(max-width $large) {
-  //   /* fix z-index order of follow links */
-  //   position: relative;
-  //   z-index: 10;
-  //   -webkit-transform: translate3d(0, 0, 0);
-  //   transform: translate3d(0, 0, 0);
-  // }
-
+  display: none;
   @include breakpoint($large) {
+    display: block;
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
     opacity: 0.75;
@@ -37,6 +30,7 @@
   }
 
   @include breakpoint($x-large) {
+    display: block;
     width: calc(#{$right-sidebar-width} - 1em);
   }
 
@@ -124,8 +118,8 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  width: 3em;
+  // height: 37px;
 
   @include breakpoint($large) {
     display: block;
@@ -135,7 +129,7 @@
 
   img {
     max-width: 110px;
-    border-radius: 50%;
+    border-radius: 15%;
 
     @include breakpoint($large) {
       padding: 5px;
