@@ -30,6 +30,9 @@
       <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span><img src="{{ teaser | relative_url }}" alt=""></a>
     </div>
     {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 15 }}..</p>{% endif %}
+
+    <!-- Preview of the post -->
+    <!-- {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 15 }}..</p>{% endif %} -->
+  
   </article>
 </div>
