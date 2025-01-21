@@ -1,88 +1,73 @@
 ---
+layout: photo
 permalink: /photo/
-comments: true 
+comments: false
 ---
 
 <style>
-
-  @media (min-width: 1001px){
-      body {
-    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_7.png');
-    /* Full height */
-    height: 100%;
-    width:100%;
-    margin:0;
-
-    /* Center and scale the image nicely */
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    }
+  .masonry:after {
+    content: '';
+    display: block;
+    clear: both;
   }
 
-  @media (max-width: 1000px){
-    body {
-    background-image: url('{{ site.baseurl }}/assets/image/photo_page/bg_6.jpg');
-    /* Full height */
-    height: 100%;
+  .grid {
+    margin: 0 -10px; /* 負邊距來補償 grid-item 的 padding */
+  }
+
+  .grid-item {
+    float: left;
+    padding: 10px; /* 在圖片容器四周增加內距 */
+  }
+
+  .grid-item img {
+    display: block;
     width: 100%;
-    margin:0;
+    border-radius: 15px;
+  }
 
-    /* Center and scale the image nicely */
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  @media(min-width: 751px) {
+    .grid-item {
+      width: 33.3333%;
     }
   }
 
-  div.scroll-container {
-    background-color: rgba(51, 51, 51, 0.7);
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-    border-radius: 10px;
-    overflow-x: scroll;
+  @media(max-width: 750px) {
+    .grid-item {
+      width: 50%;
+    }
   }
-
-  div.scroll-container img {
-    padding: 10px;
-  }
-
 </style>
 
-<details>
-  <summary>Menu</summary>
-    <a href="#mundane">Mundane</a><br>
-    <a href="#第26屆風城盃射箭錦標賽">第26屆風城盃射箭錦標賽</a><br>
-    <a href="#2023大專盃射箭">2023大專盃射箭</a><br>
-    <a href="#蘭嶼">蘭嶼</a><br>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-</details>
-
-## Mundane
-
-<div class="scroll-container">
-  <img src="/assets/image/photo_page/1.JPG">  
-  <img src="/assets/image/photo_page/2.jpg">  
-  <img src="/assets/image/photo_page/3.JPG">  
-  <img src="/assets/image/photo_page/4.jpg">  
-  <img src="/assets/image/photo_page/5.jpg">
-  <img src="/assets/image/photo_page/6.jpg">  
-  <img src="/assets/image/photo_page/7.jpeg">
-  <img src="/assets/image/photo_page/8.JPG">
-  <img src="/assets/image/photo_page/9.jpg">
-  <img src="/assets/image/photo_page/10.jpg">
-  <img src="/assets/image/photo_page/11.JPG">
-  <img src="/assets/image/photo_page/12.JPG">
-  <img src="/assets/image/23/0330-1.jpg">
-  <img src="/assets/image/23/0422-1.jpg">
+<div class="grid">
+  <div class="grid-item"><img src="/assets/image/photo_page/1.JPG"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/2.jpg"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/3.JPG"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/4.jpg"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/5.jpg"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/6.jpg"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/7.jpeg" /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/8.JPG"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/9.jpg"  /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/10.jpg" /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/11.JPG" /></div>
+  <div class="grid-item"><img src="/assets/image/photo_page/12.JPG" /></div>
+  <div class="grid-item"><img src="/assets/image/23/0330-1.jpg"     /></div>
+  <div class="grid-item"><img src="/assets/image/23/0422-1.jpg"     /></div>
 </div>
 
-## 第26屆風城盃射箭錦標賽
+<script>
+  const grid = document.querySelector('.grid');
+  const msnry = new Masonry(grid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-item',
+    gutter: 0 // Masonry 的間距設為 0，因為我們用 padding 來控制
+  });
+</script>
 
-<div class="scroll-container">
+<!-- 
   <img src="/assets/image/photo_page/112windycity/IMG_1732.JPG">
   <img src="/assets/image/photo_page/112windycity/IMG_1733.JPG">
   <img src="/assets/image/photo_page/112windycity/IMG_1734.JPG">
@@ -120,11 +105,6 @@ comments: true
   <img src="/assets/image/photo_page/112windycity/IMG_1766.JPG">
   <img src="/assets/image/photo_page/112windycity/IMG_1767.JPG">
   <img src="/assets/image/photo_page/112windycity/IMG_1768.JPG">
-</div>
-
-## 2023大專盃射箭
-
-<div class="scroll-container">
   <img src="/assets/image/photo_page/112arch/1.jpg">
   <img src="/assets/image/photo_page/112arch/2.jpg">
   <img src="/assets/image/photo_page/112arch/3.jpg">
@@ -142,11 +122,6 @@ comments: true
   <img src="/assets/image/photo_page/112arch/19.jpg">
   <img src="/assets/image/photo_page/112arch/20.jpg">
   <img src="/assets/image/photo_page/112arch/22.jpg">
-</div>
-
-## 蘭嶼
-
-<div class="scroll-container">
   <img src="/assets/image/photo_page/lanyu/1.JPG">
   <img src="/assets/image/photo_page/lanyu/2.jpg">
   <img src="/assets/image/photo_page/lanyu/3.JPG">
@@ -163,35 +138,4 @@ comments: true
   <img src="/assets/image/photo_page/lanyu/14.JPG">
   <img src="/assets/image/photo_page/lanyu/15.JPG">
   <img src="/assets/image/photo_page/lanyu/16.jpg">
-  <img src="/assets/image/photo_page/lanyu/17.JPG">
-</div>
-
-<script>
-  const scrollContainers = document.querySelectorAll(".scroll-container");
-
-  scrollContainers.forEach((scrollContainer) => {
-    scrollContainer.addEventListener("wheel", (evt) => {
-      evt.preventDefault();
-      scrollContainer.scrollLeft += evt.deltaY * 0.8;
-
-      // if (scrollContainer.scrollLeft / scrollContainer.scrollWidth > 0.9) {
-      //   console.log("end");
-      //   // wondow scroll like normal
-      //   window.scrollBy({
-      //     top: evt.deltaY,
-      //     left: 0,
-      //     behavior: "smooth",
-      //   });
-      // }
-      if (scrollContainer.scrollLeft <= 0) {
-        // console.log("start");
-        window.scrollBy({
-          top: evt.deltaY,
-          left: 0,
-          behavior: "smooth",
-        });
-      }
-
-    });
-  });
-</script>
+  <img src="/assets/image/photo_page/lanyu/17.JPG"> -->
