@@ -1,0 +1,32 @@
+.masonry:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid {
+  margin: 0 -10px; /* 負邊距來補償 grid-item 的 padding */
+}
+
+.grid-item {
+  float: left;
+  padding: 10px; /* 在圖片容器四周增加內距 */
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media(min-width: 751px) {
+  .grid-item {
+    width: 33.3333%;
+  }
+}
+
+@media(max-width: 750px) {
+  .grid-item {
+    width: 50%;
+  }
+}
