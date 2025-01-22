@@ -1,3 +1,8 @@
+.main {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 .masonry:after {
   content: '';
   display: block;
