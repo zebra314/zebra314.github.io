@@ -1,5 +1,5 @@
 ---
 permalink: /project/room_308_HD
-layout: project
+layout: empty
 ---
 {% include project/room_308_HD.html %}

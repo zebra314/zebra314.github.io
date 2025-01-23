@@ -13,18 +13,6 @@ layout: single
 </style>
 
 ## 2023
-<div>
-    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title no_toc" itemprop="headline">
-            <a href="/project/responsive_navbar" rel="permalink">responsive_navbar</a>
-        </h2>
-        <div class="thumbnail-container">
-            <a href="/project/responsive_navbar" target="_blank">
-                <img src="/assets/image/project/responsive_navbar.png">
-            </a>
-        </div>
-    </article>
-</div>
 
 <div>
     <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">

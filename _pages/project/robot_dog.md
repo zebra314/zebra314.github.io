@@ -1,5 +1,5 @@
 ---
 permalink: /project/robot_dog
-layout: project
+layout: empty
 ---
 {% include project/robot_dog.html %}
