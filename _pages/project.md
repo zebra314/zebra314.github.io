@@ -1,6 +1,7 @@
 ---
 permalink: /project/
 title: Project
+layout: single
 ---
 <style>
     .preview_model {

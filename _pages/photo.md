@@ -1,8 +1,27 @@
 ---
-layout: photo
+layout: single
 permalink: /photo/
 comments: false
 ---
+
+<style>
+#main {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-animation: $intro-transition;
+  animation: $intro-transition;
+  max-width: 100%;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
+}
+</style>
 
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
@@ -18,8 +37,7 @@ comments: false
     const grid = document.querySelector('.grid');
     const msnry = new Masonry(grid, {
       itemSelector: '.grid-item',
-      columnWidth: '.grid-item',
-      gutter: 0 // Masonry 的間距設為 0，因為我們用 padding 來控制
+      columnWidth: '.grid-item'
     });
 
     // Re-layout Masonry after each image loads

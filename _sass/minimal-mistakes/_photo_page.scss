@@ -1,18 +1,12 @@
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-  overscroll-behavior: none;
-}
-
 .masonry:after {
   content: '';
   display: block;
   clear: both;
 }
 
-.grid {
-  margin: 0 -10px; /* 負邊距來補償 grid-item 的 padding */
-}
+// .grid {
+//   margin: 0 -10px; /* 負邊距來補償 grid-item 的 padding */
+// }
 
 .grid-item {
   float: left;
@@ -20,6 +14,7 @@ html, body {
 }
 
 .grid-item img {
+  margin: 0; /* 移除圖片的 margin */
   display: block;
   width: 100%;
   border-radius: 15px;
