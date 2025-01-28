@@ -35,34 +35,45 @@ comments: false
       }
     }, true);
 
-    const gridItems = document.querySelectorAll('.grid-item img');
+    const gridItems = document.querySelectorAll('.grid-item');
 
-    // Lightbox functionality
-    const lightbox = document.createElement('div');
-    lightbox.id = 'lightbox';
-    document.body.appendChild(lightbox);
-
-    gridItems.forEach(img => {
+    gridItems.forEach(item => {
+      const img = item.querySelector('img');
+      img.clickCount = 0;
       img.addEventListener('click', () => {
-        lightbox.classList.add('active');
-        const image = document.createElement('img');
-        image.src = img.src;
-        lightbox.appendChild(image);
-        document.body.style.overflow = 'hidden';
+        img.clickCount++;
+
+        if(img.clickCount %2 === 1) {
+          document.body.style.overflow = 'hidden'; // Avoid scrolling
+          item.style.zIndex = 501;
+          img.style.zIndex = 501; // Higher than other lightbox images
+          img.style.transition = 'transform 1.5s ease-in-out';
+          img.style.overflow = 'hidden';
+
+          // Get the image position
+          const rect = img.getBoundingClientRect();
+
+          // Get the center of current view
+          const centerX = window.innerWidth / 2;
+          const centerY = window.innerHeight / 2;
+
+          const offsetX = centerX - rect.left - rect.width / 2;
+          const offsetY = centerY - rect.top - rect.height / 2;
+
+          const scale = Math.min(window.innerWidth / rect.width, window.innerHeight / rect.height) * 0.9;
+
+          img.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+
+        } else {
+          document.body.style.overflow = 'auto'; // Allow scrolling
+          img.style.zIndex = 1;
+          img.style.transform = ''; // 重置變化
+          setTimeout(() => {
+            item.style.zIndex = 1;
+          }, 1500);
+        }
       });
     });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-
-    function closeLightbox() {
-      lightbox.removeChild(lightbox.firstChild);
-      lightbox.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
   });
 
 </script>
