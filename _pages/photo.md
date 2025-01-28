@@ -23,7 +23,7 @@ comments: false
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
     const grid = document.querySelector('.grid');
     const msnry = new Masonry(grid, {
       itemSelector: '.grid-item',
@@ -50,13 +50,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = 'auto';
         expandedImage.style.transform = '';
         overlay.classList.remove('active');
-        
         setTimeout(() => {
           expandedImage.style.zIndex = 1;
           expandedImage.parentElement.style.zIndex = 1;
           masthead.style.zIndex = 20;
           expandedImage = null;
-        }, 1500);
+        }, 1200);
       }
     };
 
@@ -65,17 +64,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     gridItems.forEach(item => {
       const img = item.querySelector('img');
-      
-      img.addEventListener('click', (e) => {
+
+        img.addEventListener('click', (e) => {
+
         // Prevent click from reaching overlay
         e.stopPropagation();
-        
+
         // If image is already expanded, do nothing
-        if (expandedImage === img) return;
-        
-        // If another image is expanded, close it first
-        if (expandedImage) {
-          closeExpandedImage();
+        if (expandedImage === img) {
+          return;
+        } else if (expandedImage !== img && expandedImage) {
+          console.log('closing other expanded image');
+          return;
+          // closeExpandedImage();
         }
 
         // Expand clicked image
@@ -83,8 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
         masthead.style.zIndex = 0;
         item.style.zIndex = 50;
         img.style.zIndex = 50;
-        img.style.transition = 'transform 1.5s ease-in-out';
+        img.style.transition = 'transform 1.2s ease-in-out';
         img.style.overflow = 'hidden';
+
         overlay.classList.add('active');
 
         // Get the image position
