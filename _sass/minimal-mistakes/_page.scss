@@ -69,7 +69,7 @@ body {
 }
 
 .page__title {
-  margin-top: 0;
+  margin-top: 0.8em;
   line-height: 1;
 
   a {
@@ -78,7 +78,7 @@ body {
   }
 
   & + .page__meta {
-    margin-top: -0.5em;
+    margin-top: -0.3em;
   }
 }
 
@@ -559,7 +559,7 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
 }
 
 .page__related-title {
-  margin-bottom: 10px;
+  margin-bottom: 2em;
   font-size: $type-size-6;
   text-transform: uppercase;
 }
