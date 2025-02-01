@@ -17,8 +17,16 @@ comments: false
 <div class="overlay"></div>
 
 <div class="grid">
-  {% for img in site.data.photo-page %}
-  <div class="grid-item"><img class="lazyload" data-src="{{img}}" /></div>
+  {% assign image_folder = 'assets/image/photo_page/' %}
+
+  {% for data in site.data.photo-page %}
+    {% for file in site.static_files %}
+      {% if file.path contains image_folder and file.path contains data.keyword %}
+        <div class="grid-item">
+          <img class="lazyload" data-src="{{ file.path }}"/>
+        </div>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>
 
@@ -39,6 +47,7 @@ comments: false
 
     const gridItems = document.querySelectorAll('.grid-item');
     const masthead = document.querySelector('.masthead');
+    const footer = document.querySelector('.page__footer');
     const overlay = document.querySelector('.overlay');
     
     // Track currently expanded image
@@ -54,6 +63,7 @@ comments: false
           expandedImage.style.zIndex = 1;
           expandedImage.parentElement.style.zIndex = 1;
           masthead.style.zIndex = 20;
+          footer.style.zIndex = 20;
           expandedImage = null;
         }, 1200);
       }
@@ -74,14 +84,13 @@ comments: false
         if (expandedImage === img) {
           return;
         } else if (expandedImage !== img && expandedImage) {
-          console.log('closing other expanded image');
           return;
-          // closeExpandedImage();
         }
 
         // Expand clicked image
         document.body.style.overflow = 'hidden';
         masthead.style.zIndex = 0;
+        footer.style.zIndex = 0;
         item.style.zIndex = 50;
         img.style.zIndex = 50;
         img.style.transition = 'transform 1.2s ease-in-out';

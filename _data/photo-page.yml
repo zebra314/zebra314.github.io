@@ -1,82 +1,10 @@
-- /assets/image/photo_page/mundane-1.JPG                    
-- /assets/image/photo_page/mundane-2.jpg                    
-- /assets/image/photo_page/mundane-3.JPG                    
-- /assets/image/photo_page/mundane-4.jpg                    
-- /assets/image/photo_page/mundane-5.jpg                    
-- /assets/image/photo_page/mundane-6.jpg                    
-- /assets/image/photo_page/mundane-7.jpeg                  
-- /assets/image/photo_page/mundane-8.JPG                 
-- /assets/image/photo_page/mundane-9.jpg                  
-- /assets/image/photo_page/mundane-10.jpg                
-- /assets/image/photo_page/mundane-11.JPG                 
-- /assets/image/photo_page/mundane-0330-1.jpg                   
-- /assets/image/photo_page/mundane-0422-1.jpg                       
-- /assets/image/photo_page/112windycity-IMG_1732.JPG
-- /assets/image/photo_page/112windycity-IMG_1733.JPG
-- /assets/image/photo_page/112windycity-IMG_1734.JPG
-- /assets/image/photo_page/112windycity-IMG_1735.JPG
-- /assets/image/photo_page/112windycity-IMG_1736.JPG
-- /assets/image/photo_page/112windycity-IMG_1737.JPG
-- /assets/image/photo_page/112windycity-IMG_1739.JPG
-- /assets/image/photo_page/112windycity-IMG_1740.JPG
-- /assets/image/photo_page/112windycity-IMG_1741.JPG
-- /assets/image/photo_page/112windycity-IMG_1742.JPG
-- /assets/image/photo_page/112windycity-IMG_1743.JPG
-- /assets/image/photo_page/112windycity-IMG_1744.JPG
-- /assets/image/photo_page/112windycity-IMG_1745.JPG
-- /assets/image/photo_page/112windycity-IMG_1746.JPG
-- /assets/image/photo_page/112windycity-IMG_1747.JPG
-- /assets/image/photo_page/112windycity-IMG_1748.JPG
-- /assets/image/photo_page/112windycity-IMG_1749.JPG
-- /assets/image/photo_page/112windycity-IMG_1750.JPG
-- /assets/image/photo_page/112windycity-IMG_1751.JPG
-- /assets/image/photo_page/112windycity-IMG_1752.JPG
-- /assets/image/photo_page/112windycity-IMG_1753.JPG
-- /assets/image/photo_page/112windycity-IMG_1754.JPG
-- /assets/image/photo_page/112windycity-IMG_1755.JPG
-- /assets/image/photo_page/112windycity-IMG_1756.JPG
-- /assets/image/photo_page/112windycity-IMG_1757.JPG
-- /assets/image/photo_page/112windycity-IMG_1758.JPG
-- /assets/image/photo_page/112windycity-IMG_1759.JPG
-- /assets/image/photo_page/112windycity-IMG_1760.JPG
-- /assets/image/photo_page/112windycity-IMG_1761.JPG
-- /assets/image/photo_page/112windycity-IMG_1762.JPG
-- /assets/image/photo_page/112windycity-IMG_1763.JPG
-- /assets/image/photo_page/112windycity-IMG_1764.JPG
-- /assets/image/photo_page/112windycity-IMG_1765.JPG
-- /assets/image/photo_page/112windycity-IMG_1766.JPG
-- /assets/image/photo_page/112windycity-IMG_1767.JPG
-- /assets/image/photo_page/112windycity-IMG_1768.JPG
-- /assets/image/photo_page/112arch-1.jpg            
-- /assets/image/photo_page/112arch-2.jpg            
-- /assets/image/photo_page/112arch-3.jpg            
-- /assets/image/photo_page/112arch-4.jpg            
-- /assets/image/photo_page/112arch-5.jpg            
-- /assets/image/photo_page/112arch-7.jpg            
-- /assets/image/photo_page/112arch-9.jpg            
-- /assets/image/photo_page/112arch-11.jpg           
-- /assets/image/photo_page/112arch-12.jpg           
-- /assets/image/photo_page/112arch-14.jpg           
-- /assets/image/photo_page/112arch-15.jpg           
-- /assets/image/photo_page/112arch-16.jpg           
-- /assets/image/photo_page/112arch-17.jpg           
-- /assets/image/photo_page/112arch-18.jpg           
-- /assets/image/photo_page/112arch-19.jpg           
-- /assets/image/photo_page/112arch-20.jpg           
-- /assets/image/photo_page/112arch-22.jpg           
-- /assets/image/photo_page/lanyu-1.JPG              
-- /assets/image/photo_page/lanyu-2.jpg              
-- /assets/image/photo_page/lanyu-3.JPG              
-- /assets/image/photo_page/lanyu-4.jpg              
-- /assets/image/photo_page/lanyu-5.JPG              
-- /assets/image/photo_page/lanyu-6.jpg              
-- /assets/image/photo_page/lanyu-7.JPG              
-- /assets/image/photo_page/lanyu-8.JPG              
-- /assets/image/photo_page/lanyu-9.JPG              
-- /assets/image/photo_page/lanyu-10.jpg             
-- /assets/image/photo_page/lanyu-11.JPG             
-- /assets/image/photo_page/lanyu-12.jpg             
-- /assets/image/photo_page/lanyu-13.JPG             
-- /assets/image/photo_page/lanyu-14.JPG             
-- /assets/image/photo_page/lanyu-15.JPG             
-- /assets/image/photo_page/lanyu-16.jpg             
+- keyword: exchange
+  title: Exchange
+- keyword: mundane
+  title: Mundane
+- keyword: arch
+  title: 大專盃
+- keyword: windycity
+  title: 風城盃
+- keyword: lanyu
+  title: 蘭嶼
