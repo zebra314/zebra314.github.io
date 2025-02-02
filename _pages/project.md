@@ -1,6 +1,5 @@
 ---
 permalink: /project/
-title: Project
 layout: single
 ---
 <style>
