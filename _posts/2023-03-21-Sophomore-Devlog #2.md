@@ -1,29 +1,27 @@
 ---
 header:
-    teaser: /assets/image/photo_page/11.JPG
+    teaser: /assets/image/photo_page/mundane-11.JPG
 tag: devlog
 ---
+## 上佳與他的深夜節目
 
-## 深夜節目
-![1](/assets/image/photo_page/11.JPG)  
+![1](/assets/image/photo_page/mundane-11.JPG)  
 
 ## 課內
+
 電工學和微處理機大出包
 
 ## 程式
-人工智慧作業有點難 但網路上還找的到資料 克完就會了  
-第一份作業就像期末專題一樣  
-花了兩天吧 小累  
-原本以為可以跟唯傑組隊的說 結果他不會python  
+
+人工智慧作業有點難，但網路上還找的到資料，克完就會了，第一份作業就像期末專題一樣，花了兩天吧，小累。原本以為可以跟唯傑組隊的說，結果他說不會python。  
   
-之後TDK寫視覺 又要折壽了   
-還有暑假的GPE 
-這幾天會重新開始練  
-每週兩題吧 有維持就好   
+之後TDK寫視覺又要折壽了。
+還有暑假的GPE，這幾天會重新開始練，
+每週兩題吧，有維持就好。
 
 ## 最近
   
-```  
+```
 _:(´ཀ`」 ∠):_
 ```
   
