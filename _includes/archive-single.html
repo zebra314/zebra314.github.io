@@ -22,7 +22,8 @@
     {% include page__meta.html type=include.type %}
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src="{{ teaser | relative_url }}" alt="">
+        <!-- <img src="{{ teaser | relative_url }}" alt=""> -->
+        <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span><img src="{{ teaser | relative_url }}" alt=""></a>
       </div>
     {% endif %}
     {% if include.type == "list" and teaser %}

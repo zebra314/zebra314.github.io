@@ -12,25 +12,21 @@
 
         <div class="navbar">
           <ul class="links">
-            <!-- <li><a href="{{ '/' | relative_url }}">Home</a></li> -->
             <li><a href="{{ '/' | relative_url }}">Blog</a></li>
             <li><a href="{{ '/photo/' | relative_url }}">Photo</a></li>
             <li><a href="https://zebra314.github.io/quartz/">Note</a></li>
-            <li><a href="{{ '/project/' | relative_url }}">Project</a></li>
             <li><a href="{{ '/about/' | relative_url }}">About</a></li>
           </ul>
 
           <div class="toggle_btn">
-            <i class="fa-solid fa-bars" style="color: #222831;"></i>
+            <i class="fa-solid fa-bars" style="color: $text-color;"></i>
           </div>
 
           <div class="dropdown_menu">
-            <!-- <li><a href="{{ '/' | relative_url }}">Home</a></li> -->
-            <li><a href="{{ '/' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/photo/' | relative_url }}">Photo</a></li>
-            <li><a href="https://zebra314.github.io/quartz/">Note</a></li>
-            <li><a href="{{ '/project/' | relative_url }}">Project</a></li>
-            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <h2><a href="{{ '/' | relative_url }}">Blog</a></h2>
+            <h2><a href="{{ '/photo/' | relative_url }}">Photo</a></h2>
+            <h2><a href="https://zebra314.github.io/quartz/">Note</a></h2>
+            <h2><a href="{{ '/about/' | relative_url }}">About</a></h2>
           </div>
         </div>
 
@@ -38,116 +34,6 @@
     </div>
   </div>
 </div>
-
-<style>
-  ul {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .greedy-nav a {
-    white-space: nowrap;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1rem 0;
-
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    padding-right: 2em;
-    font-weight: 700;
-  }
-
-  .navbar .links {
-    display: flex;
-    /*place the links in a row*/
-    gap: 0.2rem;
-  }
-
-  .navbar .toggle_btn {
-    display: none;
-    /*hide the toggle button*/
-  }
-
-  /* Dropdown menu */
-  .dropdown_menu {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    top: 90px;
-    background: #eeeeee;
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    height: 0;
-    transition: height 0.5s cubic-bezier(.25, 1, .30, 1);
-  }
-
-  .dropdown_menu li {
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-  }
-
-  .dropdown_menu a {
-    display: block;
-    padding: 5px 20px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .dropdown_menu.open {
-    height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .dropdown_menu.open li {
-    visibility: visible;
-  }
-
-  .dropdown_menu.open a {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Media queries remain the same */
-  @media(min-width: 751px) {
-    .navbar .toggle_btn {
-      display: none;
-    }
-  }
-
-  @media(max-width: 750px) {
-    .navbar .links {
-      display: none;
-    }
-
-    .navbar .toggle_btn {
-      display: block;
-    }
-
-    .dropdown_menu {
-      display: block;
-      left: 0;
-      width: 100%;
-    }
-  }
-</style>
 
 <script>
   const toggleBtn = document.querySelector('.toggle_btn');
