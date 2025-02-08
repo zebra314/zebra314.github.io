@@ -1,0 +1,17 @@
+{% if page.previous or page.next %}
+  <nav class="pagination">
+    {% if page.next %}
+      <li class="arrow"><a href="{{ page.next.url | relative_url }}"><i class="fa-solid fa-chevron-left fa-2x"></i></a></li>
+    {% else %}
+      <li class="arrow"><a href="#" class="disabled"><i class="fa-solid fa-chevron-left fa-2x"></i></a></li>
+    {% endif %}
+
+    <li class="arrow"><a href="#page-title"><i class="fa-solid fa-chevron-up fa-2x"></i></a></li>
+
+    {% if page.previous %}
+      <li class="arrow"><a href="{{ page.previous.url | relative_url }}"><i class="fa-solid fa-chevron-right fa-2x"></i></a></li>
+    {% else %}
+      <li class="arrow"><a href="#" class="disabled"><i class="fa-solid fa-chevron-right fa-2x"></i></a></li>
+    {% endif %}
+  </nav>
+{% endif %}

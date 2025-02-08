@@ -1,0 +1,74 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination">
+  {% assign first_page_path = paginator.first_page_path | default: site.paginate_path | replace: 'page:num', '' | replace: '//', '/' | relative_url %}
+  <ul>
+    {% comment %} Previous Page Link {% endcomment %}
+    {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | default: first_page_path }}"><i class="fa-solid fa-chevron-left"></i></a></li>
+    {% else %}
+      <li><a href="#" class="disabled"><i class="fa-solid fa-chevron-left"></i></a></li>
+    {% endif %}
+
+    {% comment %} Always Show First Page {% endcomment %}
+    {% if paginator.page == 1 %}
+      <li><a href="#" class="disabled current">1</a></li>
+    {% else %}
+      <li><a href="{{ first_page_path }}">1</a></li>
+    {% endif %}
+
+    {% comment %} Show Pages Around Current Page Depends on Current Page {% endcomment %}
+    {% assign total_pages = paginator.total_pages | plus: 0 %}
+    {% assign current_page = paginator.page | plus: 0 %}
+    {% assign threshold = total_pages | minus: 3 %}
+
+    {% if total_pages > 4 %}
+      {% if current_page < 4 %}
+        <!-- <script>console.log("Near the first page");</script> -->
+        {% assign start_page = 2 %}
+        {% assign end_page = 5 %}
+      {% elsif current_page >=  threshold %}
+        <!-- <script>console.log("Near the last page");</script>         -->
+        {% assign start_page = total_pages | minus: 4 %}
+        {% assign end_page = total_pages | minus: 1 %}
+      {% else %}
+        <!-- <script>console.log("Middle");</script> -->
+        {% assign start_page = current_page | minus: 1 %}
+        {% assign end_page = current_page | plus: 2 %}
+      {% endif %}
+    {% else %}
+      <!-- <script>console.log("Less than 4 pages");</script> -->
+      {% assign start_page = 2 %}
+      {% assign end_page = 5 %}
+    {% endif %}
+
+    {% if start_page < 2 %}
+      {% assign start_page = 2 %}
+    {% endif %}
+    {% if end_page > paginator.total_pages | minus: 1 %}
+      {% assign end_page = paginator.total_pages | minus: 1 %}
+    {% endif %}
+
+    {% for index in (start_page..end_page) %}
+      {% if index == paginator.page %}
+        <li><a href="#" class="disabled current">{{ index }}</a></li>
+      {% else %}
+        <li><a href="{{ site.paginate_path | replace: ':num', index | relative_url }}">{{ index }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Always Show Last Page {% endcomment %}
+    {% if paginator.page == paginator.total_pages %}
+      <li><a href="#" class="disabled current">{{ paginator.total_pages }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages | relative_url }}">{{ paginator.total_pages }}</a></li>
+    {% endif %}
+
+    {% comment %} Next Page Link {% endcomment %}
+    {% if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path }}"><i class="fa-solid fa-chevron-right"></i></a></li>
+    {% else %}
+      <li><a href="#" class="disabled"><i class="fa-solid fa-chevron-right"></i></a></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

@@ -1,0 +1,41 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+<script src="https://kit.fontawesome.com/b5ce6dfdfd.js" crossorigin="anonymous"></script>
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="{{ '/' | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
+
+        <div class="navbar">
+          <ul class="links">
+            <li><a href="{{ '/' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/photo/' | relative_url }}">Photo</a></li>
+            <li><a href="https://zebra314.github.io/quartz/">Note</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          </ul>
+
+          <div id="theme_btn" class="head_btn">
+            <i class="fa-solid fa-moon" style="color: $text-color;" onclick="toggle_theme_click()"></i>
+          </div>
+
+          <div id="menu_btn" class="head_btn">
+            <i class="fa-solid fa-bars" style="color: $text-color;"></i>
+          </div>
+
+          <div class="dropdown_menu">
+            <h2><a href="{{ '/' | relative_url }}">Blog</a></h2>
+            <h2><a href="{{ '/photo/' | relative_url }}">Photo</a></h2>
+            <h2><a href="https://zebra314.github.io/quartz/">Note</a></h2>
+            <h2><a href="{{ '/about/' | relative_url }}">About</a></h2>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/masthead_btns.js' | relative_url }}"></script>
