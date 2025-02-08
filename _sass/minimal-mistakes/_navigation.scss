@@ -54,7 +54,7 @@
   @include clearfix();
   float: left;
   margin-top: 1em;
-  padding-top: 1em;
+  padding-top: 3em;
   display: flex; // 使用 flexbox
   justify-content: center; // 水平置中
   width: 100%;
@@ -71,6 +71,10 @@
     display: block;
     float: left;
     margin-left: -1px;
+
+    &.arrow {
+      width: 7em;
+    }
 
     a {
       display: block;
@@ -92,7 +96,7 @@
 
       &.current,
       &.current.disabled {
-        color: #fff;
+        color: $background-color;
         background: $primary-color;
       }
 
@@ -159,11 +163,17 @@
 }
 
 .page__content + .pagination,
-.page__meta + .pagination,
 .page__share + .pagination,
 .page__comments + .pagination {
   margin-top: 2em;
   padding-top: 2em;
+  border-top: 1px solid $border-color;
+}
+
+.page__meta + .pagination {
+  margin-top: 2em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   border-top: 1px solid $border-color;
 }
 
