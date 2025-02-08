@@ -1,6 +1,5 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 <script src="https://kit.fontawesome.com/b5ce6dfdfd.js" crossorigin="anonymous"></script>
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -18,7 +17,11 @@
             <li><a href="{{ '/about/' | relative_url }}">About</a></li>
           </ul>
 
-          <div class="toggle_btn">
+          <div id="theme_btn" class="head_btn">
+            <i class="fa-solid fa-moon" style="color: $text-color;" onclick="toggle_theme_click()"></i>
+          </div>
+
+          <div id="menu_btn" class="head_btn">
             <i class="fa-solid fa-bars" style="color: $text-color;"></i>
           </div>
 
@@ -35,37 +38,4 @@
   </div>
 </div>
 
-<script>
-  const toggleBtn = document.querySelector('.toggle_btn');
-  const toggleBtnIcon = document.querySelector('.toggle_btn i');
-  const dropdownMenu = document.querySelector('.dropdown_menu');
-  const menuItems = dropdownMenu.querySelectorAll('a');
-
-  toggleBtn.onclick = function () {
-    if (dropdownMenu.classList.contains('open')) {
-      // First, fade out the text
-      menuItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(-10px)';
-      });
-
-      // Wait for fade out animation to complete before closing menu
-      setTimeout(() => {
-        dropdownMenu.classList.remove('open');
-        document.body.style.overflow = 'auto';
-        toggleBtnIcon.classList = 'fa-solid fa-bars';
-      }, 300);
-    } else {
-      // Open menu
-      dropdownMenu.classList.add('open');
-      toggleBtnIcon.classList = 'fa-solid fa-times';
-      document.body.style.overflow = 'hidden';
-      
-      // Fade in items after menu opens
-      menuItems.forEach(item => {
-        item.style.opacity = '1';
-        item.style.transform = 'translateY(0)';
-      });
-    }
-  }
-</script>
+<script src="{{ '/assets/js/masthead_btns.js' | relative_url }}"></script>

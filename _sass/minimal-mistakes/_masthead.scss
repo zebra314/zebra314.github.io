@@ -122,7 +122,7 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  padding-right: 2em;
+  padding-right: 1em;
   font-weight: 700;
 }
 
@@ -132,7 +132,7 @@
   gap: 0.2rem;
 }
 
-.navbar .toggle_btn {
+.navbar #menu_btn {
   display: none;
   /*hide the toggle button*/
 }
@@ -185,9 +185,17 @@
   transform: translateY(0);
 }
 
+// Theme toggle button
+.head_btn {
+  width: 1em;
+  padding-right: 0px;
+  margin-left: 2rem;
+  font-size: $type-size-4;
+}
+
 /* Media queries remain the same */
 @media(min-width: $medium) {
-  .navbar .toggle_btn {
+  .navbar #menu_btn {
     display: none;
   }
 }
@@ -197,7 +205,7 @@
     display: none;
   }
 
-  .navbar .toggle_btn {
+  .navbar #menu_btn {
     display: block;
   }
 
