@@ -1,5 +1,7 @@
 # Jekyll
 
+![Powered by Jekyll](https://img.shields.io/badge/powered%20by-jekyll-yellow.svg)
+
 ## Usage
 
 Test the jekyll site locally
