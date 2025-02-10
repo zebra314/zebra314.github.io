@@ -1,13 +1,15 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
 
+
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   {% if author.avatar %}
     <div class="author__avatar">
-      <a href="{{ author.home | default: '/' | absolute_url }}">
-        <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo">
-      </a>
+      <!-- <a href="{{ author.home | default: '/' | absolute_url }}"> -->
+      <!-- <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo"> -->
+      {% include project/rubiks.html %}
+    </a>
     </div>
   {% endif %}
 
