@@ -31,42 +31,50 @@ menuBtn.onclick = function () {
   }
 }
 
-if (sessionStorage.getItem('theme') === null) {
+const darkIcon = document.querySelector('#darkIcon');
+const lightIcon = document.querySelector('#lightIcon');
+
+// Initial theme setup
+if (sessionStorage.getItem('theme') === null || sessionStorage.getItem('theme') === undefined) {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     sessionStorage.setItem('theme', 'dark');
-  }
-  else{
+  } else {
     sessionStorage.setItem('theme', 'light');
   }
 }
 
-let theme = sessionStorage.getItem('theme');
-if(theme === "dark") {
-  document.getElementById('theme-light').setAttribute('rel', 'stylesheet alternate'); 
-  sessionStorage.setItem('theme', 'dark');
-  themeIcon.classList = 'fa-solid fa-moon';
+// Show the correct theme if it was set
+if (sessionStorage.getItem('theme') == 'dark') {
+  document.getElementById('theme-light').setAttribute('rel', 'stylesheet alternate');
+  darkIcon.style.display = 'block';
+  lightIcon.style.display = 'none';
 } else {
-  document.getElementById('theme-dark').setAttribute('rel', 'stylesheet alternate'); 
-  sessionStorage.setItem('theme', 'light');
-  themeIcon.classList = 'fa-solid fa-sun';
+  document.getElementById('theme-dark').setAttribute('rel', 'stylesheet alternate');
+  darkIcon.style.display = 'none';
+  lightIcon.style.display = 'block';
 }
+
 
 function toggle_theme_click() {
   var node1 = document.getElementById('theme-light');
   var node2 = document.getElementById('theme-dark');
-  var themeIcon = document.querySelector('#theme_btn i');
-  if(node1.getAttribute('rel')=='stylesheet'){
+  
+  if (node1.getAttribute('rel') == 'stylesheet') {
+    console.log('Switch to dark theme');
     node2.setAttribute('rel', 'stylesheet');
-    setTimeout(function(){
+    setTimeout(function() {
       node1.setAttribute('rel', 'stylesheet alternate');
-      themeIcon.classList = 'fa-solid fa-moon';
+      darkIcon.style.display = 'block';
+      lightIcon.style.display = 'none';
     }, 10);
     sessionStorage.setItem('theme', 'dark');
-  }else{
+  } else {
+    console.log('Switch to light theme');
     node1.setAttribute('rel', 'stylesheet');
-    setTimeout(function(){
+    setTimeout(function() {
       node2.setAttribute('rel', 'stylesheet alternate');
-      themeIcon.classList = 'fa-solid fa-sun';
+      darkIcon.style.display = 'none';
+      lightIcon.style.display = 'block';
     }, 10);
     sessionStorage.setItem('theme', 'light');
   }

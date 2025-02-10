@@ -193,6 +193,25 @@
   font-size: $type-size-4;
 }
 
+#theme_btn {
+  display: flex;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+#theme_btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+#darkIcon {
+  color: $text-color;
+}
+
 /* Media queries remain the same */
 @media(min-width: $medium) {
   .navbar #menu_btn {
