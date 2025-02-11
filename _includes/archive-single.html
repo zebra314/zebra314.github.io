@@ -20,20 +20,26 @@
       {% endif %}
     </h2>
     {% include page__meta.html type=include.type %}
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <!-- <img src="{{ teaser | relative_url }}" alt=""> -->
+
+    {% if post.project_path %}
+      <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span>
+        <div style="display: flex; justify-content: center;">
+          {% include {{post.project_path}} %}
+        </div>
+      </a>
+    {% else %}
+      {% if include.type == "grid" and teaser %}
+        <div class="archive__item-teaser">
+          <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span><img src="{{ teaser | relative_url }}" alt=""></a>
+        </div>
+      {% endif %}
+
+      {% if include.type == "list" and teaser %}
+      <div class="thumbnail-container">
         <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span><img src="{{ teaser | relative_url }}" alt=""></a>
       </div>
-    {% endif %}
-    {% if include.type == "list" and teaser %}
-    <div class="thumbnail-container">
-      <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span><img src="{{ teaser | relative_url }}" alt=""></a>
-    </div>
-    {% endif %}
+      {% endif %}
 
-    <!-- Preview of the post -->
-    <!-- {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 15 }}..</p>{% endif %} -->
-  
+    {% endif %}
   </article>
 </div>
