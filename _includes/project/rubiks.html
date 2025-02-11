@@ -3,14 +3,15 @@
     model-viewer {
         max-width: 100px;
         max-height: 100px;
+        cursor: pointer;
     }
 </style>
 <model-viewer 
     src="../assets/model/rubiks.glb"
     loading="eager"
-    touch-action="pan-y"
     disable-zoom
-    autoplay camera-controls
+    disable-pan
+    camera-controls
     interaction-prompt="none"
-    orbit-sensitivity="2"
+    autoplay
 ></model-viewer>
