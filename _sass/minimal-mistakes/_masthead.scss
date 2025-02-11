@@ -205,11 +205,7 @@
 #theme_btn svg {
   width: 24px;
   height: 24px;
-  fill: currentColor;
-}
-
-#darkIcon #lightIcon{
-  color: $text-color;
+  fill: $text-color;
 }
 
 /* Media queries remain the same */
