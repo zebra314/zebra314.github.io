@@ -239,7 +239,12 @@
 .author__urls {
   display: none;
   position: absolute;
-  right: -70px; // Determine the position of the box to open after the button is clicked
+  right: 0;
+
+  @media (max-width: $large) {
+    right: -70px; // Determine the position of the box to open after the button is clicked
+  }
+  
   margin-top: 15px;
   padding: 10px;
   list-style-type: none;
