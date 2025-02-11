@@ -55,7 +55,7 @@
   }
 
   img {
-    width: 100%;
+    // width: 100%;
 
     &.emoji {
       width: 20px;
@@ -117,8 +117,6 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  // width: 3em;
-  // height: 37px;
 
   @include breakpoint($large) {
     display: block;
@@ -127,21 +125,24 @@
   }
 
   img {
-    max-width: 110px;
     border-radius: $border-radius;
+    max-width: 130px;
 
-    @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
-    }
+    // @include breakpoint($large) {
+    //   border: 1px solid $border-color;
+    // }
+
+    // @include breakpoint($x-large) {
+    //   max-width: 150px;
+    // }
   }
 }
 
 .author__content {
   display: table-cell;
   vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
+  padding-left: 20px;
+  // padding-right: 20px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -175,7 +176,11 @@
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $large) {
+    margin-top: 5px;
   }
 }
 
