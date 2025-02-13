@@ -1,0 +1,164 @@
+// Light Variables
+$light-background: #faf8f8;
+$light-background-lighter: lighten($light-background, 15%);
+$light-footer-background-color: $light-background;
+$light-primary-color: #2b2b2b;
+
+$light-text-color: #2b2b2b;
+$light-muted-text-color: #4e4e4e;
+
+$light-border-color: mix(#fff, #393e46, 75%);
+$light-border-color-darker: darken($light-border-color, 25%);
+
+$light-link-color: $light-text-color; //#284b63;
+$light-link-color-visited: $light-text-color; //#284b63;
+$light-link-hover-color: #84a59d;
+$light-masthead-link-color: $light-text-color;
+$light-masthead-link-color-hover: $light-text-color;
+$light-navicon-link-color-hover: lighten($light-text-color, 80%);
+
+// Dark Variables
+$dark-background: #161618;
+$dark-background-lighter: lighten($dark-background, 15%);
+$dark-footer-background-color: $dark-background;
+$dark-form-background-color: darken($dark-background, 10%);
+$dark-primary-color: #ebebec;
+
+$dark-text-color: #ebebec;
+$dark-muted-text-color: #d4d4d4;
+
+$dark-border-color: lighten($dark-background, 15%);
+$dark-border-color-darker: lighten($dark-border-color, 5%);
+
+$dark-link-color: $dark-text-color;
+$dark-link-color-visited: $dark-text-color;
+$dark-link-hover-color: #84a59d;
+$dark-masthead-link-color: $dark-text-color;
+$dark-masthead-link-color-hover: darken($dark-text-color, 20%);
+$dark-navicon-link-color-hover: darken($dark-text-color, 20%);
+
+// Light settings default
+:root {
+  --background-color: #{$light-background};
+  --background-color-lighter: #{$light-background-lighter};
+  --footer-background-color: #{$light-footer-background-color};
+  --primary-color: #{$light-primary-color};
+
+  --text-color: #{$light-text-color};
+  --muted-text-color: #{$light-muted-text-color};
+
+  --border-color: #{$light-border-color};
+  --border-color-darker: #{$light-border-color-darker};
+  
+  --link-color: #{$light-link-color};
+  --link-color-visited: #{$light-link-color-visited};
+  --link-hover-color: #{$light-link-hover-color};
+  --masthead-link-color: #{$light-masthead-link-color};
+  --masthead-link-color-hover: #{$light-masthead-link-color-hover};
+  --navicon-link-color-hover: #{$light-navicon-link-color-hover};
+
+  .page__footer {
+    color: #fff !important; // override
+  }
+  
+  .page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
+  }
+}
+
+// Dark settings default
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$dark-background};
+    --background-color-lighter: #{$dark-background-lighter};
+    --footer-background-color: #{$dark-footer-background-color};
+    --form-background-color: #{$dark-form-background-color};
+    --primary-color: #{$dark-primary-color};
+
+    --text-color: #{$dark-text-color};
+    --muted-text-color: #{$dark-muted-text-color};
+
+    --border-color: #{$dark-border-color};
+    --border-color-darker: #{$dark-border-color-darker};
+
+    --link-color: #{$dark-link-color};
+    --link-color-visited: #{$dark-link-color-visited};
+    --link-hover-color: #{$dark-link-hover-color};
+    --masthead-link-color: #{$dark-masthead-link-color};
+    --masthead-link-color-hover: #{$dark-masthead-link-color-hover};
+    --navicon-link-color-hover: #{$dark-navicon-link-color-hover};
+
+    .author__urls.social-icons i,
+    .author__urls.social-icons .svg-inline--fa,
+    .page__footer-follow .social-icons i,
+    .page__footer-follow .social-icons .svg-inline--fa  {
+      color: inherit;
+    }
+
+    .ais-search-box .ais-search-box--input {
+      background-color: #{$dark-form-background-color};
+    }
+  }
+}
+
+// Light settings for user to switch to
+:root[data-theme="light"] {
+  --background-color: #{$light-background};
+  --background-color-lighter: #{$light-background-lighter};
+  --footer-background-color: #{$light-footer-background-color};
+  --primary-color: #{$light-primary-color};
+
+  --text-color: #{$light-text-color};
+  --muted-text-color: #{$light-muted-text-color};
+
+  --border-color: #{$light-border-color};
+  --border-color-darker: #{$light-border-color-darker};
+  
+  --link-color: #{$light-link-color};
+  --link-color-visited: #{$light-link-color-visited};
+  --link-hover-color: #{$light-link-hover-color};
+  --masthead-link-color: #{$light-masthead-link-color};
+  --masthead-link-color-hover: #{$light-masthead-link-color-hover};
+  --navicon-link-color-hover: #{$light-navicon-link-color-hover};
+
+  .page__footer {
+    color: #fff !important; // override
+  }
+  
+  .page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
+  }
+}
+
+// Dark settings for user to switch to
+:root[data-theme="dark"] {
+  --background-color: #{$dark-background};
+  --background-color-lighter: #{$dark-background-lighter};
+  --footer-background-color: #{$dark-footer-background-color};
+  --form-background-color: #{$dark-form-background-color};
+  --primary-color: #{$dark-primary-color};
+
+  --text-color: #{$dark-text-color};
+  --muted-text-color: #{$dark-muted-text-color};
+
+  --border-color: #{$dark-border-color};
+  --border-color-darker: #{$dark-border-color-darker};
+
+  --link-color: #{$dark-link-color};
+  --link-color-visited: #{$dark-link-color-visited};
+  --link-hover-color: #{$dark-link-hover-color};
+  --masthead-link-color: #{$dark-masthead-link-color};
+  --masthead-link-color-hover: #{$dark-masthead-link-color-hover};
+  --navicon-link-color-hover: #{$dark-navicon-link-color-hover};
+
+  .author__urls.social-icons i,
+  .author__urls.social-icons .svg-inline--fa,
+  .page__footer-follow .social-icons i,
+  .page__footer-follow .social-icons .svg-inline--fa  {
+    color: inherit;
+  }
+
+  .ais-search-box .ais-search-box--input {
+    background-color: #{$dark-form-background-color};
+  }
+}

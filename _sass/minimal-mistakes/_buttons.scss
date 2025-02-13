@@ -30,8 +30,8 @@
 
   /* button colors */
   $buttoncolors:
-  (primary, $primary-color),
-  (inverse, lighten($background-color, 15%)),
+  (primary, var(--primary-color)),
+  (inverse, var(--background-color-lighter)),
   (light-outline, transparent),
   (success, $success-color),
   (warning, $warning-color),
@@ -43,20 +43,25 @@
 
   @each $buttoncolor, $color in $buttoncolors {
     &--#{$buttoncolor} {
-      @include yiq-contrasted($color);
+      // @include yiq-contrasted($color);
       @if ($buttoncolor == inverse) {
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
+        
+        // Update the color dynamically using CSS variable
+        background-color: var(--background-color-lighter);
+        // You might need to adjust text color based on theme
+        color: var(--text-color);
       }
       @if ($buttoncolor == light-outline) {
         border: 1px solid #fff;
       }
-
-      // &:visited {
-      //   @include yiq-contrasted($color);
-      // }
-
+  
       &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
+        // @include yiq-contrasted(mix(#000, var(--background-color-lighter), 20%));
+        @if ($buttoncolor == inverse) {
+          // For inverse button hover, use CSS variable
+          background-color: var(--background-color);
+        }
       }
     }
   }

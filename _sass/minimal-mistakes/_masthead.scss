@@ -4,7 +4,7 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--border-color);
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -128,13 +128,38 @@
 
 .navbar .links {
   display: flex;
-  /*place the links in a row*/
   gap: 0.2rem;
 }
 
-.navbar #menu_btn {
-  display: none;
-  /*hide the toggle button*/
+/* Head Button */
+.head_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  width: 25px;
+  padding: 0;
+}
+
+.head_btn svg {
+  fill: var(--text-color);
+  width: 100%;
+  height: auto;
+}
+
+.head_btn:focus,
+.head_btn:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+#barIcon,
+#xIcon {
+  transition: opacity 0.3s ease;
 }
 
 /* Dropdown menu */

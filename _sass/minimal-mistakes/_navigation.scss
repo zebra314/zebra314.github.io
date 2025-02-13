@@ -86,22 +86,22 @@
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: $muted-text-color;
-      border: 1px solid mix(#000, $border-color, 25%);
+      color: var(--muted-text-color);
+      border: 1px solid var(--border-color-darker);
       border-radius: 0;
 
       &:hover {
-        color: $link-color-hover;
+        color: var(--link-color-hover);
       }
 
       &.current,
       &.current.disabled {
-        color: $background-color;
-        background: $primary-color;
+        color: var(--background-color);
+        background: var(--primary-color);
       }
 
       &.disabled {
-        color: rgba($muted-text-color, 0.5);
+        color: rgba(var(--muted-text-color), 0.5);
         pointer-events: none;
         cursor: not-allowed;
       }
@@ -135,8 +135,8 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    color: var(--muted-text-color);
+    border: 1px solid var(--border-color-darker);
     border-radius: $border-radius;
 
     &:hover {
@@ -155,7 +155,7 @@
     }
 
     &.disabled {
-      color: rgba($muted-text-color, 0.5);
+      color: rgba(var(--muted-text-color), 0.5);
       pointer-events: none;
       cursor: not-allowed;
     }
@@ -167,14 +167,14 @@
 .page__comments + .pagination {
   margin-top: 2em;
   padding-top: 2em;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--border-color);
 }
 
 .page__meta + .pagination {
   margin-top: 2em;
   padding-top: 3em;
   padding-bottom: 3em;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--border-color);
 }
 
 /*
@@ -197,13 +197,13 @@
   a {
     display: block;
     margin: 0 1rem;
-    color: $masthead-link-color;
+    color: var(--masthead-link-color);
     text-decoration: none;
     -webkit-transition: none;
     transition: none;
 
     &:hover {
-      color: $masthead-link-color-hover;
+      color: var(--masthead-link-color-hover);
     }
 
     &.site-logo {
@@ -258,7 +258,7 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: $primary-color;
+        background: var(--primary-color);
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -280,9 +280,9 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     border-radius: $border-radius;
-    background: $background-color;
+    background: var(--background-color);
     -webkit-box-shadow: 0 2px 4px 0 rgba(#000, 0.16),
       0 2px 10px 0 rgba(#000, 0.12);
     box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
@@ -297,8 +297,8 @@
       font-size: $type-size-5;
 
       &:hover {
-        color: $masthead-link-color-hover;
-        background: $navicon-link-color-hover;
+        color: var(--masthead-link-color-hover);
+        background: var(--navicon-link-color-hover);
       }
     }
 
@@ -310,7 +310,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $border-color transparent;
+      border-color: var(--border-color) transparent;
       display: block;
       z-index: 0;
     }
@@ -323,14 +323,14 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $background-color transparent;
+      border-color: var(--background-color) transparent;
       display: block;
       z-index: 1;
     }
 
     li {
       display: block;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid var(--border-color);
 
       &:last-child {
         border-bottom: none;
@@ -511,7 +511,7 @@
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /*
@@ -521,8 +521,8 @@
 .toc {
   font-family: $sans-serif-narrow;
   color: $gray;
-  background-color: $background-color;
-  border: 1px solid $border-color;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
@@ -530,7 +530,7 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
-    background: $primary-color;
+    background: var(--primary-color);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
   }
@@ -555,13 +555,13 @@
   a {
     display: block;
     padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
+    color: var(--muted-text-color);
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
 
     &:hover {
-      color: $text-color;
+      color: var(--text-color);
     }
   }
 

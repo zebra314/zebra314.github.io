@@ -14,8 +14,8 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ '/assets/css/main-light.css' | relative_url }}" id="theme-light">
-<link rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" id="theme-dark">
+<link rel="preload" as="style" fetchpriority="high" href="{{ '/assets/css/main.css' | relative_url }}" >
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
