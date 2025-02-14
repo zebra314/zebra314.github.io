@@ -91,17 +91,17 @@
       border-radius: 0;
 
       &:hover {
-        color: var(--link-color-hover);
+        background-color: var(--background-color-lighter);
       }
 
       &.current,
       &.current.disabled {
         color: var(--background-color);
-        background: var(--primary-color);
+        background: var(--text-color);
       }
 
       &.disabled {
-        color: rgba(var(--muted-text-color), 0.5);
+        color: var(--muted-text-color-dark);
         pointer-events: none;
         cursor: not-allowed;
       }
