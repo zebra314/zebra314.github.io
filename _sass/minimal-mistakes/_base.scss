@@ -337,3 +337,8 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+a[rel="permalink"] {
+  user-drag: none;  // Safari
+  -webkit-user-drag: none;  // Chrome, Edge
+}
