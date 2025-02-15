@@ -57,10 +57,6 @@ $dark-navicon-link-color-hover: darken($dark-text-color, 20%);
   --masthead-link-color-hover: #{$light-masthead-link-color-hover};
   --navicon-link-color-hover: #{$light-navicon-link-color-hover};
 
-  .page__footer {
-    color: #fff !important; // override
-  }
-  
   .page__footer-follow .social-icons .svg-inline--fa {
     color: inherit;
   }
@@ -121,13 +117,6 @@ $dark-navicon-link-color-hover: darken($dark-text-color, 20%);
   --masthead-link-color-hover: #{$light-masthead-link-color-hover};
   --navicon-link-color-hover: #{$light-navicon-link-color-hover};
 
-  .page__footer {
-    color: #fff !important; // override
-  }
-  
-  .page__footer-follow .social-icons .svg-inline--fa {
-    color: inherit;
-  }
 }
 
 // Dark settings for user to switch to
