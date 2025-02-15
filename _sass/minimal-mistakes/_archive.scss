@@ -64,7 +64,7 @@
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1; // Ensure title doesn't wrap
+  line-height: 1.2; // Ensure title doesn't wrap
 
   a[rel="permalink"]::before {
     content: '';
