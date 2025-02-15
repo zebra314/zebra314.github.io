@@ -14,22 +14,6 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
-
-  @media (min-width: $medium) {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-
-  @media (min-width: $large) {
-    padding-left: 4em;
-    padding-right: 4em;
-  }
-
-  @media (min-width: $x-large) {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
-
   @include breakpoint($x-large) {
     max-width: $max-width;
   }
