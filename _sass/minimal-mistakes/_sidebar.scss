@@ -128,13 +128,9 @@
     border-radius: $border-radius;
     max-width: 130px;
 
-    // @include breakpoint($large) {
-    //   border: 1px solid var(--border-color);
-    // }
-
-    // @include breakpoint($x-large) {
-    //   max-width: 150px;
-    // }
+    @include breakpoint($x-large) {
+      max-width: 150px;
+    }
   }
 }
 
@@ -172,14 +168,7 @@
 }
 
 .author__bio {
-  margin: 0;
-
-  @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $large) {
+  p {
     margin-top: 5px;
   }
 }
