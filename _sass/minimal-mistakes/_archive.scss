@@ -16,8 +16,20 @@
   }
 }
 
+.entries-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  column-gap: 2rem; 
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .archive__item {
   position: relative;
+  width: 100%;
 
   a {
     position: relative;
@@ -52,6 +64,7 @@
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1; // Ensure title doesn't wrap
 
   a[rel="permalink"]::before {
     content: '';
@@ -70,30 +83,32 @@
 // for the styling of the Recent posts thumbnails
 .thumbnail-container {
   position: relative;
-  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 3/2;
+
   overflow: hidden;
   border-radius: 20px;
   margin-bottom: 25px;
 }
 
 .thumbnail-container img {
+  // Size settings
   max-height: 450px;
   height: auto;
   width: 100%;
-  object-fit: cover;  
-  object-position: center;
-
   @media (max-width: 600px) { // Adjust the max-width value as needed
     max-height: 100vw; // Set max-height to be equal to the viewport width
   }
-}
 
-.thumbnail-container img{
+  object-fit: cover;  
+  object-position: center;
+
   transition: 300ms ease-in-out;
-}
+  &:hover {
+    transform: scale(1.1);
+  }
 
-.thumbnail-container:hover img{
-  transform: scale(1.1);
+
 }
 
 .technology-stack {
@@ -172,6 +187,7 @@
    ========================================================================== */
 
 .list__item {
+  width: 100%;
   .page__meta {
     margin: 0 0 4px;
     font-size: 0.8em;
