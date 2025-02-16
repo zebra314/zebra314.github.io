@@ -1,7 +1,8 @@
 ---
+title: "27th TDK Robocon Site Model"
 header:
     teaser: /assets/image/23/0402.png
-tag: devlog
+tag: Devlog
 ---
 This model was built by Gavin Jhen and will be used for simulating the 27th TDK Robocon competition. I believe that having a convenient way to view the competition site could help generate ideas for the mechanism. Therefore, I decided to transfer the site model to this online web page.
 

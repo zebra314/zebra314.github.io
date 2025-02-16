@@ -1,7 +1,7 @@
 ---
 header:
     teaser: /assets/image/23/0216-2.JPG
-tag: devlog
+tag: Devlog
 ---
 
 TDK月底公告題目，新一輪的折磨即將開始。

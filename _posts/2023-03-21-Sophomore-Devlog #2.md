@@ -1,7 +1,7 @@
 ---
 header:
     teaser: /assets/image/photo_page/mundane-11.JPG
-tag: devlog
+tag: Devlog
 ---
 ## 上佳與他的深夜節目
 
