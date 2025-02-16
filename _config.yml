@@ -253,12 +253,14 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: jekyll-archives
-  path: /categories/
-tag_archive:
-  type: jekyll-archives
-  path: /tags/
+
+# category_archive:
+#   type: jekyll-archives
+#   path: /categories/
+# tag_archive:
+#   type: jekyll-archives
+#   path: /tags/
+
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
@@ -301,3 +303,6 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+# Fix the warning: " GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data."
+github: [metadata]
