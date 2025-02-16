@@ -7,7 +7,6 @@ gem "faraday-retry"
 gem "github-pages", "~> 232", group: :jekyll_plugins # Check the versions at https://pages.github.com/versions/
 
 group :jekyll_plugins do
-  gem "jekyll-include-cache", group: :jekyll_plugins
   gem "jekyll-archives", group: :jekyll_plugins
   gem "jekyll-paginate", group: :jekyll_plugins
   gem "jekyll-sitemap", group: :jekyll_plugins
