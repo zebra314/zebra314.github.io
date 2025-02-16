@@ -2,6 +2,7 @@
 title: "27th TDK Robocon Site Model"
 header:
     teaser: /assets/image/23/0402.png
+project_path: project/27th_TDK_site.html
 tag: Devlog
 ---
 This model was built by Gavin Jhen and will be used for simulating the 27th TDK Robocon competition. I believe that having a convenient way to view the competition site could help generate ideas for the mechanism. Therefore, I decided to transfer the site model to this online web page.
@@ -10,8 +11,11 @@ Initially, SolidWorks could only export the model to the .3mf format for use in 
 
 After an exhaustive search, I found a plugin developed by Simlab that can export .gltf files from SolidWorks. After three days of trying, I finally succeeded in loading the model.
 
+<div style="display: flex; justify-content: center;">
+  {% include {{ page.project_path }} %}
+</div>
 
-<style>
+<!-- <style>
     .preview_model {
         width: 100%;
         height: 30vh;
@@ -22,4 +26,4 @@ After an exhaustive search, I found a plugin developed by Simlab that can export
 <p align="center">
     <iframe class='preview_model' src="/project/27th_TDK_site_model"></iframe>
 </p>
-[*View in full page*](/project/27th_TDK_site_model){:target="_blank"}
+[*View in full page*](/project/27th_TDK_site_model){:target="_blank"} -->
