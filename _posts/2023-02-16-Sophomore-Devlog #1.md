@@ -1,11 +1,11 @@
 ---
 header:
-    teaser: /assets/image/23/0216-2.JPG
+    teaser: /assets/image/23/0216-2.webp
 tag: Devlog
 ---
 
 TDK月底公告題目，新一輪的折磨即將開始。
-![i](/assets/image/23/0216-1.JPG)
+![i](/assets/image/23/0216-1.webp)
 
 ## 專題
 
@@ -49,4 +49,4 @@ class部份會需要重包，現在測試寫的有點亂。
 材料訂購方面估計也會拖，專題40%，飛行組30~40%，自動組20~30% ，大概這樣吧。
   
 真是頭痛，大家加油。
-![i](/assets/image/23/0216-2.JPG)
+![i](/assets/image/23/0216-2.webp)
