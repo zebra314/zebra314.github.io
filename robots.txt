@@ -1,3 +1,6 @@
 User-agent: *
-# Disallow: /drafts/  # 如果有不想被索引的資料夾
+
+Allow: /
+Disallow: /assets/
+
 Sitemap: https://zebra314.github.io/sitemap.xml
