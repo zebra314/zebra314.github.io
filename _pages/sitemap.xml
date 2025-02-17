@@ -1,0 +1,54 @@
+---
+permalink: /sitemap.xml
+layout: empty
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog posts -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    {% if post.image %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ post.image }}</image:loc>
+      <image:title>{{ post.image_alt | default: post.title }}</image:title>
+    </image:image>
+    {% endif %}
+  </url>
+  {% endfor %}
+
+  <!-- Category pages
+  {% for category in site.categories %}
+  <url>
+    <loc>{{ site.url }}/categories/{{ category[0] | slugify }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %} -->
+
+  <!-- Static pages -->
+  {% for page in site.pages %}
+  {% if page.layout != nil and page.layout != 'redirect' %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.last_modified_at | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endif %}
+  {% endfor %}
+</urlset>
