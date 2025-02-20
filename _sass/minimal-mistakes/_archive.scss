@@ -94,12 +94,8 @@
 .thumbnail-container img {
   // Size settings
   max-height: 450px;
-  // height: auto;
   min-height: 100%;
   width: 100%;
-  @media (max-width: 600px) { // Adjust the max-width value as needed
-    max-height: 100vw; // Set max-height to be equal to the viewport width
-  }
 
   object-fit: cover;  
   object-position: center;
@@ -108,8 +104,6 @@
   &:hover {
     transform: scale(1.1);
   }
-
-
 }
 
 .technology-stack {
