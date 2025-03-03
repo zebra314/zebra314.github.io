@@ -3,9 +3,6 @@
     
   {% if page.author_profile or layout.author_profile %}
     {% if paginator.page == 1%}
-      <script>
-        console.log("{{ paginator.page }}");
-      </script>
       {% include author-profile.html %}
     {% endif %}
   {% endif %}
