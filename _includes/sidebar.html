@@ -2,7 +2,12 @@
   <div class="sidebar sticky">
     
   {% if page.author_profile or layout.author_profile %}
-    {% include author-profile.html %}
+    {% if paginator.page == 1%}
+      <script>
+        console.log("{{ paginator.page }}");
+      </script>
+      {% include author-profile.html %}
+    {% endif %}
   {% endif %}
 
   {% if page.sidebar %}
