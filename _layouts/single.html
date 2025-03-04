@@ -18,6 +18,24 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{% if page.katex %}
+<!-- Katex -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      // customised options
+      delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+      ],
+      throwOnError : false
+    });
+  });
+</script>
+{% endif %}
+
 <div id="main" role="main">
   <div id="sidebar-single">
     {% include sidebar.html %}
