@@ -155,7 +155,7 @@
     }
 
     &.disabled {
-      color: rgba(var(--muted-text-color), 0.5);
+      color: var(--muted-text-color-dark);
       pointer-events: none;
       cursor: not-allowed;
     }
