@@ -20,14 +20,6 @@
       {% endif %}
     </h2>
     {% include page__meta.html type=include.type %}
-
-    {% if post.project_path %}
-      <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span>
-        <div style="display: flex; justify-content: center;">
-          {% include {{post.project_path}} %}
-        </div>
-      </a>
-    {% else %}
       {% if include.type == "grid" and teaser %}
         <div class="archive__item-teaser">
           <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span>
@@ -38,12 +30,11 @@
 
       {% if include.type == "list" and teaser %}
       <div class="thumbnail-container">
-        <a href="{{ post.url | relative_url }}" rel="permalink"><span class="sr-only">Permalink</span>
+        <a href="{{ post.url | relative_url }}" rel="permalink">
+          <span class="sr-only">Permalink</span>
           <img src="{{ teaser | relative_url }}" alt="" decoding="auto">
         </a>
       </div>
       {% endif %}
-
-    {% endif %}
   </article>
 </div>
