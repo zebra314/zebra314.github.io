@@ -227,7 +227,7 @@
 .grid__item {
   margin-bottom: 2em;
 
-  @include breakpoint($small) {
+  @include breakpoint(480px) {
     float: left;
     width: span(5 of 10);
 
@@ -285,8 +285,12 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
-    font-size: $type-size-5;
+    margin-bottom: 0.25em;
+    font-family: $sans-serif-narrow;
+    line-height: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2; // Ensure title doesn't wrap
   }
 
   .archive__item-excerpt {
@@ -299,7 +303,7 @@
   }
 
   .archive__item-teaser {
-    @include breakpoint($small) {
+    @include breakpoint(480px) {
       max-height: 200px;
     }
 

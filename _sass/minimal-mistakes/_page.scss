@@ -559,19 +559,23 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
 
 .page__related {
   @include clearfix();
-  float: left;
-  // margin-top: 2em;
-  // padding-top: 1em;
-  // border-top: 1px solid var(--border-color);
-
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
+    padding-right: $right-sidebar-width;
   }
+
+  float: left;
+  margin-top: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  clear: both;
 
   a {
     color: inherit;
@@ -582,8 +586,7 @@ div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid_desktop {
 .page__related-title {
   margin-top: 0;
   margin-bottom: 2em;
-  font-size: $type-size-6;
-  text-transform: uppercase;
+  font-size: $type-size-4;
 }
 
 /*
