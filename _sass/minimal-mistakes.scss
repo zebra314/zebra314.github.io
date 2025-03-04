@@ -17,17 +17,17 @@
 /* Core CSS */
 @import "minimal-mistakes/reset";
 @import "minimal-mistakes/base";
-@import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
+// @import "minimal-mistakes/forms";
+// @import "minimal-mistakes/tables";
 @import "minimal-mistakes/animations";
 
 /* Components */
 @import "minimal-mistakes/buttons";
-@import "minimal-mistakes/notices";
+// @import "minimal-mistakes/notices";
 @import "minimal-mistakes/masthead";
 @import "minimal-mistakes/navigation";
 @import "minimal-mistakes/footer";
-@import "minimal-mistakes/search";
+// @import "minimal-mistakes/search";
 @import "minimal-mistakes/syntax";
 // @import "minimal-mistakes/thumbnails.scss"; looking into _archive.scss
 
