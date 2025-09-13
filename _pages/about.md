@@ -15,9 +15,13 @@ title: false
 </div>
 
 <script>
-  const userLanguage = navigator.language || navigator.userLanguage;
-  const lang = userLanguage.startsWith("zh") ? "zh-TW" : "en";
-  document.getElementById(lang).style.display = "block";
+  document.addEventListener("DOMContentLoaded", () => {
+    const userLanguage = (navigator.language || navigator.userLanguage).toLowerCase();
+    const lang = userLanguage.startsWith("zh") ? "zh-TW" : "en";
+    const target = document.getElementById(lang);
+    if (target) target.style.display = "block";
+    console.log("Detected language:", userLanguage, "→ Showing:", lang);
+  });
 </script>
 
 ![me with cat](/assets/image/cat.webp)
